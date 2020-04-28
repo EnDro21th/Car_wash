@@ -1,0 +1,18 @@
+- Language use
+Html5
+CSS
+Javascript
+JQuery
+Python
+Django
+
+- IDE
+Pycharm
+VSCode
+
+-Editor
+Notepad
+sublime
+
+-Database
+MySql

@@ -1,0 +1,533 @@
+<!doctype html>
+{% load static %}
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Report</title>
+    <meta name="generator" content="WYSIWYG Web Builder 15 - http://www.wysiwygwebbuilder.com">
+    <style>
+        @page  {
+            size: A4 landscape;
+        }
+        body {
+            background-color: #FFFFFF;
+            color: #000000;
+            font-family: Arial;
+            font-weight: normal;
+            font-size: 13px;
+            line-height: 1.1875;
+            margin: 0;
+            padding: 0;
+        }
+
+        a {
+            color: #0000FF;
+            text-decoration: underline;
+        }
+
+        a:visited {
+            color: #800080;
+        }
+
+        a:active {
+            color: #FF0000;
+        }
+
+        a:hover {
+            color: #0000FF;
+            text-decoration: underline;
+        }
+
+        input:focus, textarea:focus, select:focus {
+            outline: none;
+        }
+
+        #wb_Form1 {
+            background-color: #FFFFFF;
+            background-image: none;
+            border: 0px solid #CCCCCC;
+        }
+
+        #wb_Text1 {
+            background-color: transparent;
+            background-image: none;
+            border: 0px solid #000000;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+        }
+
+        #wb_Text1 div {
+            text-align: center;
+        }
+
+        #wb_Text2 {
+            background-color: transparent;
+            background-image: none;
+            border: 0px solid #000000;
+            padding: 0;
+            margin: 0;
+            text-align: left;
+        }
+
+        #wb_Text2 div {
+            text-align: left;
+        }
+
+        #wb_Image1 {
+            vertical-align: top;
+        }
+
+        #Image1 {
+            border: 0px solid #000000;
+            padding: 0;
+            margin: 0;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        #wb_Text3 {
+            background-color: transparent;
+            background-image: none;
+            border: 0px solid #000000;
+            padding: 0;
+            margin: 0;
+            text-align: left;
+        }
+
+        #wb_Text3 div {
+            text-align: left;
+        }
+
+        #wb_Text4 {
+            background-color: transparent;
+            background-image: none;
+            border: 0px solid #000000;
+            padding: 0;
+            margin: 0;
+            text-align: left;
+        }
+
+        #wb_Text4 div {
+            text-align: left;
+        }
+
+        #wb_Text5 {
+            background-color: transparent;
+            background-image: none;
+            border: 0px solid #000000;
+            padding: 0;
+            margin: 0;
+            text-align: left;
+        }
+
+        #wb_Text5 div {
+            text-align: left;
+        }
+
+        #wb_Text6 {
+            background-color: transparent;
+            background-image: none;
+            border: 0px solid #000000;
+            padding: 0;
+            margin: 0;
+            text-align: left;
+        }
+
+        #wb_Text6 div {
+            text-align: left;
+        }
+
+        #wb_Text7 {
+            background-color: transparent;
+            background-image: none;
+            border: 0px solid #000000;
+            padding: 0;
+            margin: 0;
+            text-align: right;
+        }
+
+        #wb_Text7 div {
+            text-align: right;
+        }
+
+        #Line1 {
+            border-color: #07456F;
+            border-style: solid;
+            border-bottom-width: 5px;
+            border-top: 0px;
+            border-left: 0px;
+            border-right: 0px;
+            height: 0 !important;
+            line-height: 0px !important;
+            margin: 0;
+            padding: 0;
+        }
+
+        #Line2 {
+            border-color: #07456F;
+            border-style: solid;
+            border-bottom-width: 5px;
+            border-top: 0px;
+            border-left: 0px;
+            border-right: 0px;
+            height: 0 !important;
+            line-height: 0px !important;
+            margin: 0;
+            padding: 0;
+        }
+
+        #Line3 {
+            border-color: #07456F;
+            border-style: solid;
+            border-bottom-width: 5px;
+            border-top: 0px;
+            border-left: 0px;
+            border-right: 0px;
+            height: 0 !important;
+            line-height: 0px !important;
+            margin: 0;
+            padding: 0;
+        }
+
+        #Line4 {
+            border-color: #07456F;
+            border-style: dotted;
+            border-bottom-width: 5px;
+            border-top: 0px;
+            border-left: 0px;
+            border-right: 0px;
+            height: 0 !important;
+            line-height: 0px !important;
+            margin: 0;
+            padding: 0;
+        }
+
+        #wb_services {
+            background-color: transparent;
+            background-image: none;
+            border: 0px solid #000000;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+        }
+
+        #wb_services div {
+            text-align: center;
+        }
+
+        #wb_sales {
+            background-color: transparent;
+            background-image: none;
+            border: 0px solid #000000;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+        }
+
+        #wb_sales div {
+            text-align: center;
+        }
+
+        #Line5 {
+            border-color: #07456F;
+            border-style: dotted;
+            border-bottom-width: 5px;
+            border-top: 0px;
+            border-left: 0px;
+            border-right: 0px;
+            height: 0 !important;
+            line-height: 0px !important;
+            margin: 0;
+            padding: 0;
+        }
+
+        #wb_total_income {
+            background-color: transparent;
+            background-image: none;
+            border: 0px solid #000000;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+        }
+
+        #wb_total_income div {
+            text-align: center;
+        }
+
+        #wb_total_expense {
+            background-color: transparent;
+            background-image: none;
+            border: 0px solid #000000;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+        }
+
+        #wb_total_expense div {
+            text-align: center;
+        }
+
+        #wb_others {
+            background-color: transparent;
+            background-image: none;
+            border: 0px solid #000000;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+        }
+
+        #wb_others div {
+            text-align: center;
+        }
+
+        #wb_adjustment {
+            background-color: transparent;
+            background-image: none;
+            border: 0px solid #000000;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+        }
+
+        #wb_adjustment div {
+            text-align: center;
+        }
+
+        #Line6 {
+            border-color: #07456F;
+            border-style: dotted;
+            border-bottom-width: 5px;
+            border-top: 0px;
+            border-left: 0px;
+            border-right: 0px;
+            height: 0 !important;
+            line-height: 0px !important;
+            margin: 0;
+            padding: 0;
+        }
+
+        #Line7 {
+            border-color: #07456F;
+            border-style: dotted;
+            border-bottom-width: 5px;
+            border-top: 0px;
+            border-left: 0px;
+            border-right: 0px;
+            height: 0 !important;
+            line-height: 0px !important;
+            margin: 0;
+            padding: 0;
+        }
+
+        #wb_Text11 {
+            background-color: transparent;
+            background-image: none;
+            border: 0px solid #000000;
+            padding: 0;
+            margin: 0;
+            text-align: right;
+        }
+
+        #wb_Text11 div {
+            text-align: right;
+        }
+
+        #wb_Text15 {
+            background-color: transparent;
+            background-image: none;
+            border: 0px solid #000000;
+            padding: 0;
+            margin: 0;
+            text-align: left;
+        }
+
+        #wb_Text15 div {
+            text-align: left;
+        }
+
+        #wb_Text16 {
+            background-color: transparent;
+            background-image: none;
+            border: 0px solid #000000;
+            padding: 0;
+            margin: 0;
+            text-align: left;
+        }
+
+        #wb_Text16 div {
+            text-align: left;
+        }
+
+        #wb_Text17 {
+            background-color: transparent;
+            background-image: none;
+            border: 0px solid #000000;
+            padding: 0;
+            margin: 0;
+            text-align: left;
+        }
+
+        #wb_Text17 div {
+            text-align: left;
+        }
+
+        #wb_date {
+            background-color: transparent;
+            background-image: none;
+            border: 0px solid #000000;
+            padding: 0;
+            margin: 0;
+            text-align: left;
+        }
+
+        #wb_date div {
+            text-align: left;
+        }
+
+        #wb_Shape1 {
+            transform: rotate(0deg);
+            transform-origin: 50% 50%;
+        }
+
+        #Shape1 {
+            border-width: 0;
+            vertical-align: top;
+        }
+
+        #wb_Text19 {
+            background-color: transparent;
+            background-image: none;
+            border: 0px solid #000000;
+            padding: 0;
+            margin: 0;
+            text-align: left;
+        }
+
+        #wb_Text19 div {
+            text-align: left;
+        }
+
+        #wb_grand_total {
+            background-color: transparent;
+            background-image: none;
+            border: 0px solid #000000;
+            padding: 0;
+            margin: 0;
+            text-align: right;
+        }
+
+        #wb_grand_total div {
+            text-align: right;
+        }
+
+        #wb_Text21 {
+            background-color: transparent;
+            background-image: none;
+            border: 0px solid #000000;
+            padding: 0;
+            margin: 0;
+            text-align: left;
+        }
+
+        #wb_Text21 div {
+            text-align: left;
+        }
+
+        #wb_employee_name {
+            background-color: transparent;
+            background-image: none;
+            border: 0px solid #000000;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+        }
+
+        #wb_employee_name div {
+            text-align: center;
+        }
+    </style>
+</head>
+<body onload="p();">
+<div id="wb_Form1" style="position:absolute;left:0px;top:0px;width:1536px;height:820px;z-index:31;">
+    <form name="Form1" method="post" action="" enctype="multipart/form-data" id="Form1">
+        <div id="wb_Image1" style="position:absolute;left:60px;top:8px;width:179px;height:179px;z-index:0;">
+            <img src="{% static 'images/logo.png' %}" height="268px" width="267px" id="Image1" alt=""></div>
+        <div id="wb_Text2" style="position:absolute;left:20px;top:197px;width:1480px;height:24px;z-index:1;">
+            <span style="color:#07456F;font-family:Arial;font-size:27px;">Company Name: </span><span
+                style="color:#000000;font-family:Arial;font-size:27px;"><strong><em>Pan Pan - Auto Care &amp; Car Wash</em></strong></span>
+        </div>
+        <div id="wb_Text1"
+             style="position:absolute;left:0px;top:60px;width:1500px;height:58px;text-align:center;z-index:2;">
+            <span style="color:#07456F;font-family:Arial;font-size:64px;"><strong><em>Generated Report </em></strong></span>
+        </div>
+        <div id="wb_Text3" style="position:absolute;left:20px;top:244px;width:187px;height:24px;z-index:3;">
+            <span style="color:#07456F;font-family:Arial;font-size:27px;">Date Range: </span></div>
+        <div id="wb_Text4" style="position:absolute;left:20px;top:310px;width:1480px;height:24px;z-index:4;">
+            <span style="color:#07456F;font-family:Arial;font-size:27px;"><strong>+ Income</strong></span></div>
+        <div id="wb_Text5" style="position:absolute;left:60px;top:350px;width:179px;height:24px;z-index:5;">
+            <span style="color:#07456F;font-family:Arial;font-size:27px;">- Services</span></div>
+        <hr id="Line1" style="position:absolute;left:0px;top:182px;width:1536px;z-index:7;">
+        <hr id="Line2" style="position:absolute;left:0px;top:285px;width:1536px;z-index:8;">
+        <hr id="Line3" style="position:absolute;left:0px;top:505px;width:1536px;z-index:9;">
+        <hr id="Line4" style="position:absolute;left:239px;top:374px;width:1138px;z-index:10;">
+        <div id="wb_services"
+             style="position:absolute;left:1390px;top:350px;width:146px;height:24px;text-align:center;z-index:11;">
+            <span style="color:#000000;font-family:Arial;font-size:27px;"><strong><em>{{ total_service }}</em></strong></span>
+        </div>
+        <div id="wb_Text7"
+             style="position:absolute;left:1240px;top:449px;width:137px;height:24px;text-align:right;z-index:14;">
+            <span style="color:#07456F;font-family:Arial;font-size:27px;"><strong>Total:&nbsp;&nbsp; $</strong></span>
+        </div>
+        <div id="wb_total_income"
+             style="position:absolute;left:1390px;top:449px;width:146px;height:24px;text-align:center;z-index:15;">
+            <span style="color:#000000;font-family:Arial;font-size:27px;"><strong><em>{{ total_service }}</em></strong></span></div>
+        <div id="wb_Text16" style="position:absolute;left:60px;top:580px;width:179px;height:24px;z-index:16;">
+            <span style="color:#07456F;font-family:Arial;font-size:27px;">- Adjustment</span></div>
+        <div id="wb_Text15" style="position:absolute;left:60px;top:630px;width:179px;height:24px;z-index:17;">
+            <span style="color:#07456F;font-family:Arial;font-size:27px;">- Expense</span></div>
+        <hr id="Line6" style="position:absolute;left:230px;top:600px;width:1138px;z-index:18;">
+        <hr id="Line7" style="position:absolute;left:230px;top:650px;width:1138px;z-index:19;">
+        <div id="wb_Text11"
+             style="position:absolute;left:1257px;top:680px;width:120px;height:24px;text-align:right;z-index:20;">
+            <span style="color:#07456F;font-family:Arial;font-size:27px;"><strong>Total:&nbsp;&nbsp; $</strong></span>
+        </div>
+        <div id="wb_Text17" style="position:absolute;left:20px;top:540px;width:1480px;height:24px;z-index:21;">
+            <span style="color:#07456F;font-family:Arial;font-size:27px;"><strong>+ Expense</strong></span></div>
+        <div id="wb_total_expense"
+             style="position:absolute;left:1390px;top:680px;width:146px;height:24px;text-align:center;z-index:22;">
+            <span style="color:#000000;font-family:Arial;font-size:27px;"><strong><em>{{ ex_to }}</em></strong></span></div>
+        <div id="wb_others"
+             style="position:absolute;left:1390px;top:630px;width:146px;height:24px;text-align:center;z-index:23;">
+            <span style="color:#000000;font-family:Arial;font-size:27px;"><strong><em>{{ total_expense }}</em></strong></span></div>
+        <div id="wb_adjustment"
+             style="position:absolute;left:1390px;top:580px;width:146px;height:24px;text-align:center;z-index:24;">
+            <span style="color:#000000;font-family:Arial;font-size:27px;"><strong><em>{{ total_aj }}</em></strong></span></div>
+        <div id="wb_date" style="position:absolute;left:177px;top:244px;width:670px;height:24px;z-index:25;">
+            <span style="color:#000000;font-family:Arial;font-size:27px;"><strong><em>{{ date_start }} - {{ date_end }}</em></strong></span>
+        </div>
+        <div id="wb_Shape1" style="position:absolute;left:0px;top:730px;width:1536px;height:90px;z-index:26;">
+            <img src="{% static 'images/img0001_2.png' %}" id="Shape1" alt="" style="width:1536px;height:90px;"></div>
+        <div id="wb_Text19" style="position:absolute;left:40px;top:756px;width:460px;height:38px;z-index:27;">
+            <span style="color:#FFFFFF;font-family:Arial;font-size:43px;"><strong>Grand Total:&nbsp;&nbsp; $</strong></span>
+        </div>
+        <div id="wb_grand_total"
+             style="position:absolute;left:1220px;top:756px;width:278px;height:38px;text-align:right;z-index:28;">
+            <span style="color:#FFFFFF;font-family:Arial;font-size:43px;"><strong>{{ g_t }}</strong></span></div>
+        <div id="wb_Text21" style="position:absolute;left:1220px;top:140px;width:207px;height:24px;z-index:29;">
+            <span style="color:#07456F;font-family:Arial;font-size:27px;">Generate By:</span></div>
+        <div id="wb_employee_name"
+             style="position:absolute;left:1390px;top:140px;width:146px;height:24px;text-align:center;z-index:30;">
+            <span style="color:#000000;font-family:Arial;font-size:27px;"><strong><em>{{ user }}</em></strong></span>
+        </div>
+    </form>
+</div>
+</body>
+</html>
+<script>
+    function p() {
+        print();
+    }
+</script>

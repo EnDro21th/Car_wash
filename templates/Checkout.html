@@ -1,0 +1,1082 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Checkout</title>
+    <link href="{% static 'images/logo.png' %}" rel="icon" sizes="3474x3473" type="image/png">
+    <style>
+
+        #wb_Shape3 {
+            transform: rotate(0deg);
+            transform-origin: 50% 50%;
+        }
+
+        #Shape3 {
+            border-width: 0;
+            vertical-align: top;
+        }
+
+        #wb_Shape1 {
+            transform: rotate(0deg);
+            transform-origin: 50% 50%;
+        }
+
+        #Shape1 {
+            border-width: 0;
+            vertical-align: top;
+        }
+
+        #wb_Shape2 {
+            transform: rotate(0deg);
+            transform-origin: 50% 50%;
+        }
+
+        #Shape2 {
+            border-width: 0;
+            vertical-align: top;
+        }
+
+        #service_button {
+            border: 1px solid #265A88;
+            background-color: #265A88;
+            background-image: url({% static 'images/services_60px.png' %});
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: 50px 50px;
+            color: #FFFFFF;
+            font-family: Arial;
+            font-weight: normal;
+            font-size: 13px;
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        #service_button:hover {
+            background-color: #4682B4;
+            box-shadow: -2px -2px 5px #265A88 inset;
+            -webkit-transition: background-color 100ms ease 0ms, box-shadow 100ms ease 0ms;
+            -moz-transition: background-color 100ms ease 0ms, box-shadow 100ms ease 0ms;
+            transition: background-color 100ms ease 0ms, box-shadow 100ms ease 0ms;
+        }
+
+        #wb_Shape4 {
+            transform: rotate(0deg);
+            transform-origin: 50% 50%;
+        }
+
+        #Shape4 {
+            border-width: 0;
+            vertical-align: top;
+        }
+
+        #service_button {
+            border: 1px solid #265A88;
+            background-color: #265A88;
+            background-image: url({% static 'images/services_60px.png' %});
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: 50px 50px;
+            color: #FFFFFF;
+            font-family: Arial;
+            font-weight: normal;
+            font-size: 13px;
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        #service_button:hover {
+            background-color: #4682B4;
+            box-shadow: -2px -2px 5px #265A88 inset;
+            -webkit-transition: background-color 100ms ease 0ms, box-shadow 100ms ease 0ms;
+            -moz-transition: background-color 100ms ease 0ms, box-shadow 100ms ease 0ms;
+            transition: background-color 100ms ease 0ms, box-shadow 100ms ease 0ms;
+        }
+
+        #wb_Shape4 {
+            transform: rotate(0deg);
+            transform-origin: 50% 50%;
+        }
+
+        #Shape4 {
+            border-width: 0;
+            vertical-align: top;
+        }
+
+        #wb_Image1 {
+            vertical-align: top;
+        }
+
+        #Image1 {
+            border: 0px solid #000000;
+            padding: 0;
+            margin: 0;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        #stock_button {
+            border: 1px solid #265A88;
+            background-color: #265A88;
+            background-image: url({% static 'images/inventory_flow_128px.png' %});
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: 50px 50px;
+            color: #FFFFFF;
+            font-family: Arial;
+            font-weight: normal;
+            font-size: 13px;
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        #stock_button:hover {
+            background-color: #4682B4;
+            box-shadow: -2px -2px 5px #265A88 inset;
+            -webkit-transition: background-color 100ms ease 0ms, box-shadow 100ms ease 0ms;
+            -moz-transition: background-color 100ms ease 0ms, box-shadow 100ms ease 0ms;
+            transition: background-color 100ms ease 0ms, box-shadow 100ms ease 0ms;
+        }
+
+        #customer_button {
+            border: 1px solid #265A88;
+            background-color: #265A88;
+            background-image: url({% static 'images/customer_insight_60px.png' %});
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: 50px 50px;
+            color: #FFFFFF;
+            font-family: Arial;
+            font-weight: normal;
+            font-size: 13px;
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        #customer_button:hover {
+            background-color: #4682B4;
+            box-shadow: -2px -2px 5px #265A88 inset;
+            -webkit-transition: background-color 100ms ease 0ms, box-shadow 100ms ease 0ms;
+            -moz-transition: background-color 100ms ease 0ms, box-shadow 100ms ease 0ms;
+            transition: background-color 100ms ease 0ms, box-shadow 100ms ease 0ms;
+        }
+
+        #report_button {
+            border: 1px solid #265A88;
+            background-color: #265A88;
+            background-image: url({% static 'images/cashbook_128px.png' %});
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: 50px 50px;
+            color: #FFFFFF;
+            font-family: Arial;
+            font-weight: normal;
+            font-size: 13px;
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        #report_button:hover {
+            background-color: #4682B4;
+            box-shadow: -2px -2px 5px #265A88 inset;
+            -webkit-transition: background-color 100ms ease 0ms, box-shadow 100ms ease 0ms;
+            -moz-transition: background-color 100ms ease 0ms, box-shadow 100ms ease 0ms;
+            transition: background-color 100ms ease 0ms, box-shadow 100ms ease 0ms;
+        }
+
+        #logout_butt {
+            border: 1px solid #2C2B3C;
+            background-color: transparent;
+            background-image: url({% static 'images/shutdown_52px.png' %});
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: 50px 50px;
+            color: #FFFFFF;
+            font-family: Arial;
+            font-weight: normal;
+            font-size: 13px;
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        #logout_butt:hover {
+            background-color: #800000;
+            box-shadow: -2px -2px 5px #4F4F4F inset;
+            -webkit-transition: background-color 100ms ease 0ms, box-shadow 100ms ease 0ms;
+            -moz-transition: background-color 100ms ease 0ms, box-shadow 100ms ease 0ms;
+            transition: background-color 100ms ease 0ms, box-shadow 100ms ease 0ms;
+        }
+
+        .my-custom-scrollbar1 {
+            top: 290px;
+            margin-right: 15px;
+            position: relative;
+            height: 165px;
+            overflow: auto;
+        }
+
+        .table-wrapper-scroll-y {
+            display: block;
+        }
+
+        .table-wrapper-scroll-y::-webkit-scrollbar {
+            width: 15px;
+
+        }
+
+        .table-wrapper-scroll-y::-webkit-scrollbar-track {
+            box-shadow: inset 0 0 5px grey;
+            border-radius: 10px;
+        }
+
+        .table-wrapper-scroll-y::-webkit-scrollbar-thumb {
+            background: #265A88;
+            border-radius: 10px;
+        }
+
+        .table-wrapper-scroll-y::-webkit-scrollbar-thumb:hover {
+            background: #4682b4;
+        }
+
+        #wb_form_checkout {
+            background-color: #FFFFFF;
+            background-image: none;
+            border: 0px solid #CCCCCC;
+        }
+
+        #Button8 {
+            border: 1px solid #2E6DA4;
+            border-radius: 50px;
+            background-color: #265A88;
+            background-image: none;
+            color: #FFFFFF;
+            font-family: Arial;
+            font-weight: bold;
+            font-style: italic;
+            font-size: 27px;
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        #wb_Shape61 {
+            transform: rotate(0deg);
+            transform-origin: 50% 50%;
+        }
+
+        #Shape61 {
+            border-width: 0;
+            vertical-align: top;
+        }
+
+        #txtbox_billto {
+            border: 1px solid transparent;
+            border-radius: 20px;
+            background-color: #FFFFFF;
+            background-image: none;
+            color: #265A88;
+            font-family: Arial;
+            font-weight: normal;
+            font-size: 27px;
+            line-height: 31px;
+            padding: 4px 4px 4px 4px;
+            margin: 0;
+            text-align: center;
+        }
+
+        #txtbox_billto:focus {
+            border-color: #66AFE9;
+            box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.075), 0px 0px 8px rgba(102, 175, 233, 0.60);
+            outline: 0;
+        }
+
+        #txtbox_billto::placeholder {
+            color: #265A88;
+            opacity: 1;
+        }
+
+        #txtbox_billto::-ms-input-placeholder {
+            color: #265A88;
+        }
+
+        #Button56 {
+            border: 1px solid #265A88;
+            border-radius: 50px;
+            background-color: #265A88;
+            background-image: none;
+            color: #FFFFFF;
+            font-family: Arial;
+            font-weight: normal;
+            font-size: 24px;
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        #Button57 {
+            border: 1px solid #265A88;
+            border-radius: 50px;
+            background-color: #265A88;
+            background-image: none;
+            color: #FFFFFF;
+            font-family: Arial;
+            font-weight: normal;
+            font-size: 24px;
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        #txtbox_date {
+            border: 1px solid transparent;
+            border-radius: 20px;
+            background-color: #FFFFFF;
+            background-image: none;
+            color: #265A88;
+            font-family: Arial;
+            font-weight: normal;
+            font-size: 27px;
+            line-height: 31px;
+            padding: 4px 4px 4px 4px;
+            margin: 0;
+            text-align: center;
+        }
+
+        #txtbox_date:focus {
+            border-color: #66AFE9;
+            box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.075), 0px 0px 8px rgba(102, 175, 233, 0.60);
+            outline: 0;
+        }
+
+        #txtbox_date::placeholder {
+            color: #265A88;
+            opacity: 1;
+        }
+
+        #txtbox_date::-ms-input-placeholder {
+            color: #265A88;
+        }
+
+        #table_checkout {
+            border: 0px solid transparent;
+            background-color: #265A88;
+            background-image: none;
+            border-collapse: collapse;
+            border-spacing: 0px;
+            margin: 0;
+        }
+
+        #table_checkout td {
+            padding: 0;
+        }
+
+        #table_checkout td div {
+            white-space: nowrap;
+        }
+
+        #table_checkout p, #table_checkout ul {
+            margin: 0;
+            padding: 0;
+        }
+
+        #table_checkout .cell0 {
+            background-color: #265A88;
+            background-image: none;
+            border: 1px #4682B4 solid;
+            text-align: center;
+            vertical-align: middle;
+            width: 686px;
+            height: 52px;
+            color: #FFFFFF;
+            font-family: Arial;
+            font-size: 20px;
+            line-height: 22.5px;
+        }
+
+        #table_checkout .cell1 {
+            background-color: #265A88;
+            background-image: none;
+            border: 1px #4682B4 solid;
+            text-align: center;
+            vertical-align: middle;
+            width: 58px;
+            height: 52px;
+            color: #FFFFFF;
+            font-family: Arial;
+            font-size: 20px;
+            line-height: 22.5px;
+        }
+
+        #table_checkout .cell2 {
+            background-color: #265A88;
+            background-image: none;
+            border: 1px #4682B4 solid;
+            text-align: center;
+            vertical-align: middle;
+            width: 100px;
+            height: 52px;
+            color: #FFFFFF;
+            font-family: Arial;
+            font-size: 20px;
+            line-height: 22.5px;
+        }
+
+        #table_checkout .cell3 {
+            background-color: #265A88;
+            background-image: none;
+            border: 1px #4682B4 solid;
+            text-align: center;
+            vertical-align: middle;
+            width: 254px;
+            height: 52px;
+            color: #FFFFFF;
+            font-family: Arial;
+            font-size: 20px;
+            line-height: 22.5px;
+        }
+
+        #table_checkout .cell4 {
+            background-color: #FFFFFF;
+            background-image: none;
+            border: 1px #265A88 solid;
+            text-align: center;
+            vertical-align: middle;
+            width: 686px;
+            height: 54px;
+            color: #000000;
+            font-family: Arial;
+            font-size: 13px;
+            line-height: 16px;
+        }
+
+        #table_checkout .cell5 {
+            background-color: #FFFFFF;
+            background-image: none;
+            border: 1px #265A88 solid;
+            text-align: center;
+            vertical-align: middle;
+            width: 58px;
+            height: 54px;
+            color: #000000;
+            font-family: Arial;
+            font-size: 13px;
+            line-height: 16px;
+        }
+
+        #table_checkout .cell6 {
+            background-color: #FFFFFF;
+            background-image: none;
+            border: 1px #265A88 solid;
+            text-align: center;
+            vertical-align: middle;
+            width: 100px;
+            height: 54px;
+            color: #000000;
+            font-family: Arial;
+            font-size: 13px;
+            line-height: 16px;
+        }
+
+        #table_checkout .cell7 {
+            background-color: #FFFFFF;
+            background-image: none;
+            border: 1px #265A88 solid;
+            text-align: center;
+            vertical-align: middle;
+            width: 254px;
+            height: 54px;
+        }
+
+        #table_checkout tr:nth-child(odd) {
+            background-color: #FFFFFF;
+        }
+
+        #Button58 {
+            border: 1px solid #265A88;
+            border-radius: 50px;
+            background-color: #265A88;
+            background-image: none;
+            color: #FFFFFF;
+            font-family: Arial;
+            font-weight: normal;
+            font-size: 24px;
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        #Button58:hover {
+            background-color: #4682B4;
+            box-shadow: 2px 2px 5px #265A88;
+            -webkit-transition: background-color 100ms linear 0ms, box-shadow 100ms linear 0ms;
+            -moz-transition: background-color 100ms linear 0ms, box-shadow 100ms linear 0ms;
+            transition: background-color 100ms linear 0ms, box-shadow 100ms linear 0ms;
+        }
+
+        #txtbox_InputRiel {
+            border: 1px solid #265A88;
+            border-radius: 20px;
+            background-color: #FFFFFF;
+            background-image: none;
+            color: #265A88;
+            font-family: Arial;
+            font-weight: normal;
+            font-size: 27px;
+            line-height: 31px;
+            padding: 4px 4px 4px 4px;
+            margin: 0;
+            text-align: center;
+        }
+
+        #txtbox_InputRiel:focus {
+            border-color: #66AFE9;
+            box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.075), 0px 0px 8px rgba(102, 175, 233, 0.60);
+            outline: 0;
+        }
+
+        #Button59 {
+            border: 1px solid #265A88;
+            border-radius: 50px;
+            background-color: #265A88;
+            background-image: none;
+            color: #FFFFFF;
+            font-family: Arial;
+            font-weight: normal;
+            font-size: 24px;
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        #Button59:hover {
+            background-color: #4682B4;
+            box-shadow: 2px 2px 5px #265A88;
+            -webkit-transition: background-color 100ms linear 0ms, box-shadow 100ms linear 0ms;
+            -moz-transition: background-color 100ms linear 0ms, box-shadow 100ms linear 0ms;
+            transition: background-color 100ms linear 0ms, box-shadow 100ms linear 0ms;
+        }
+
+        #txtbox_InputUSD {
+            border: 1px solid #265A88;
+            border-radius: 20px;
+            background-color: #FFFFFF;
+            background-image: none;
+            color: #265A88;
+            font-family: Arial;
+            font-weight: normal;
+            font-size: 27px;
+            line-height: 31px;
+            padding: 4px 4px 4px 4px;
+            margin: 0;
+            text-align: center;
+        }
+
+        #txtbox_InputUSD:focus {
+            border-color: #66AFE9;
+            box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.075), 0px 0px 8px rgba(102, 175, 233, 0.60);
+            outline: 0;
+        }
+
+        #Button60 {
+            border: 1px solid #265A88;
+            border-radius: 50px;
+            background-color: #265A88;
+            background-image: none;
+            color: #FFFFFF;
+            font-family: Arial;
+            font-weight: normal;
+            font-size: 24px;
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        #change_riel_txt {
+            border: 1px solid transparent;
+            border-radius: 20px;
+            background-color: #FFFFFF;
+            background-image: none;
+            color: #265A88;
+            font-family: Arial;
+            font-weight: normal;
+            font-size: 27px;
+            line-height: 31px;
+            padding: 4px 4px 4px 4px;
+            margin: 0;
+            text-align: center;
+        }
+
+        #change_riel_txt:focus {
+            border-color: #66AFE9;
+            box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.075), 0px 0px 8px rgba(102, 175, 233, 0.60);
+            outline: 0;
+        }
+
+        #change_riel_txt::placeholder {
+            color: #265A88;
+            opacity: 1;
+        }
+
+        #change_riel_txt::-ms-input-placeholder {
+            color: #265A88;
+        }
+
+        #Button61 {
+            border: 1px solid #265A88;
+            border-radius: 50px;
+            background-color: #265A88;
+            background-image: none;
+            color: #FFFFFF;
+            font-family: Arial;
+            font-weight: normal;
+            font-size: 24px;
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        #change_usd_txt {
+            border: 1px solid transparent;
+            border-radius: 20px;
+            background-color: #FFFFFF;
+            background-image: none;
+            color: #265A88;
+            font-family: Arial;
+            font-weight: normal;
+            font-size: 27px;
+            line-height: 31px;
+            padding: 4px 4px 4px 4px;
+            margin: 0;
+            text-align: center;
+        }
+
+        #change_usd_txt:focus {
+            border-color: #66AFE9;
+            box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.075), 0px 0px 8px rgba(102, 175, 233, 0.60);
+            outline: 0;
+        }
+
+        #change_usd_txt::placeholder {
+            color: #265A88;
+            opacity: 1;
+        }
+
+        #change_usd_txt::-ms-input-placeholder {
+            color: #265A88;
+        }
+
+        #Editbox27 {
+            border: 1px solid transparent;
+            border-radius: 20px;
+            background-color: #FFFFFF;
+            background-image: none;
+            color: #000000;
+            font-family: Arial;
+            font-weight: bold;
+            font-size: 27px;
+            line-height: 31px;
+            padding: 4px 4px 4px 4px;
+            margin: 0;
+            text-align: right;
+        }
+
+        #Editbox27:focus {
+            border-color: #66AFE9;
+            box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.075), 0px 0px 8px rgba(102, 175, 233, 0.60);
+            outline: 0;
+        }
+
+        #Editbox27::placeholder {
+            color: #265A88;
+            opacity: 1;
+        }
+
+        #Editbox27::-ms-input-placeholder {
+            color: #265A88;
+        }
+
+        #Editbox28 {
+            border: 1px solid transparent;
+            border-radius: 20px;
+            background-color: #FFFFFF;
+            background-image: none;
+            color: #000000;
+            font-family: Arial;
+            font-weight: bold;
+            font-size: 27px;
+            line-height: 31px;
+            padding: 4px 4px 4px 4px;
+            margin: 0;
+            text-align: right;
+        }
+
+        #Editbox28:focus {
+            border-color: #66AFE9;
+            box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.075), 0px 0px 8px rgba(102, 175, 233, 0.60);
+            outline: 0;
+        }
+
+        #Editbox28::placeholder {
+            color: #265A88;
+            opacity: 1;
+        }
+
+        #Editbox28::-ms-input-placeholder {
+            color: #265A88;
+        }
+
+        #Button50 {
+            border: 1px solid #265A88;
+            border-radius: 50px;
+            background-color: #265A88;
+            background-image: none;
+            color: #FFFFFF;
+            font-family: Arial;
+            font-weight: bold;
+            font-size: 24px;
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        #subtotal_txt {
+            border: 1px solid transparent;
+            border-radius: 20px;
+            background-color: #FFFFFF;
+            background-image: none;
+            color: #265A88;
+            font-family: Arial;
+            font-weight: normal;
+            font-size: 27px;
+            line-height: 31px;
+            padding: 4px 4px 4px 4px;
+            margin: 0;
+            text-align: left;
+        }
+
+        #subtotal_txt:focus {
+            border-color: #66AFE9;
+            box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.075), 0px 0px 8px rgba(102, 175, 233, 0.60);
+            outline: 0;
+        }
+
+        #subtotal_txt::placeholder {
+            color: #265A88;
+            opacity: 1;
+        }
+
+        #subtotal_txt::-ms-input-placeholder {
+            color: #265A88;
+        }
+
+        #discount_txt {
+            border: 1px solid transparent;
+            border-radius: 20px;
+            background-color: #FFFFFF;
+            background-image: none;
+            color: #265A88;
+            font-family: Arial;
+            font-weight: normal;
+            font-size: 27px;
+            line-height: 31px;
+            padding: 4px 4px 4px 4px;
+            margin: 0;
+            text-align: left;
+        }
+
+        #discount_txt:focus {
+            border-color: #66AFE9;
+            box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.075), 0px 0px 8px rgba(102, 175, 233, 0.60);
+            outline: 0;
+        }
+
+        #discount_txt::placeholder {
+            color: #265A88;
+            opacity: 1;
+        }
+
+        #discount_txt::-ms-input-placeholder {
+            color: #265A88;
+        }
+
+        #total_txt {
+            border: 1px solid transparent;
+            border-radius: 20px;
+            background-color: #FFFFFF;
+            background-image: none;
+            color: #265A88;
+            font-family: Arial;
+            font-weight: normal;
+            font-size: 27px;
+            line-height: 31px;
+            padding: 4px 4px 4px 4px;
+            margin: 0;
+            text-align: left;
+        }
+
+        #total_txt:focus {
+            border-color: #66AFE9;
+            box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.075), 0px 0px 8px rgba(102, 175, 233, 0.60);
+            outline: 0;
+        }
+
+        #total_txt::placeholder {
+            color: #265A88;
+            opacity: 1;
+        }
+
+        #total_txt::-ms-input-placeholder {
+            color: #265A88;
+        }
+
+        #butt_checkout, #print {
+            border: 1px solid #265A88;
+            border-radius: 50px;
+            background-color: #265A88;
+            background-image: none;
+            color: #FFFFFF;
+            font-family: Arial;
+            font-weight: bold;
+            font-style: italic;
+            font-size: 24px;
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        #butt_backcheckout {
+            border: 1px solid maroon;
+            border-radius: 50px;
+            background-color: maroon;
+            background-image: none;
+            color: #FFFFFF;
+            font-family: Arial;
+            font-weight: bold;
+            font-style: italic;
+            font-size: 24px;
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        #butt_backcheckout:hover {
+            background-color: #ba2121;
+            -webkit-transition: background-color 100ms linear 0ms, box-shadow 100ms linear 0ms;
+            -moz-transition: background-color 100ms linear 0ms, box-shadow 100ms linear 0ms;
+            transition: background-color 100ms linear 0ms, box-shadow 100ms linear 0ms;
+        }
+
+        #butt_checkout:hover, #print:hover {
+            background-color: #4682B4;
+            box-shadow: 2px 2px 5px #265A88;
+            -webkit-transition: background-color 100ms linear 0ms, box-shadow 100ms linear 0ms;
+            -moz-transition: background-color 100ms linear 0ms, box-shadow 100ms linear 0ms;
+            transition: background-color 100ms linear 0ms, box-shadow 100ms linear 0ms;
+        }
+
+    </style>
+    <script src="{% static 'jquery-1.12.4.min.js' %}"></script>
+    <script src="{% static 'jquery-ui.min.js' %}"></script>
+    <script src="{% static 'wb.carousel.min.js' %}"></script>
+    <script src="{% static 'wb.carousel.effects.min.js' %}"></script>
+    <script src="{% static 'searchindex.js' %}"></script>
+    <script src="{% static 'wb.sitesearch.min.js' %}"></script>
+    <script src="{% static 'wwb15.min.js' %}"></script>
+</head>
+<body>
+<div id="Shelter">
+    <div id="wb_Shape3" style="position:absolute;left:0px;top:0px;width:1536px;height:753px;z-index:332;">
+        <img src="{% static 'images/img0001.png' %}" id="Shape3" alt="" style="width:1536px;height:753px;"></div>
+    <div id="wb_Shape1" style="position:absolute;left:129px;top:0px;width:1280px;height:753px;z-index:333;">
+        <img src="{% static 'images/img0007.png' %}" id="Shape1" alt="" style="width:1280px;height:753px;"></div>
+    <div id="wb_Shape2" style="position:absolute;left:128px;top:0px;width:92px;height:753px;z-index:334;">
+        <img src="{% static 'images/img0006.png' %}" id="Shape2" alt="" style="width:92px;height:753px;"></div>
+    <input type="submit" id="service_button"
+           onclick="ShowObjectWithEffect('wb_form_service', 1, 'slideleft', 500);document.getElementById('stock_button').disabled=true;document.getElementById('customer_button').disabled=true;document.getElementById('report_button').disabled=true;document.getElementById('logout_butt').disabled=true;return false;"
+           name="service" value="" style="position:absolute;left:128px;top:90px;width:92px;height:92px;z-index:335;">
+    <div id="wb_Shape4" style="position:absolute;left:128px;top:0px;width:92px;height:92px;z-index:336;">
+        <img src="{% static 'images/img0008.png' %}" id="Shape4" alt="" style="width:92px;height:92px;"></div>
+    <div id="wb_Image1" style="position:absolute;left:129px;top:7px;width:92px;height:92px;z-index:337;">
+        <img src="{% static 'images/logo.png' %}" id="Image1" alt=""></div>
+    <input type="submit" id="stock_button"
+           onclick="ShowObjectWithEffect('wb_form_stock', 1, 'slideleft', 500);document.getElementById('service_button').disabled=true;document.getElementById('customer_button').disabled=true;document.getElementById('report_button').disabled=true;document.getElementById('logout_butt').disabled=true;return false;"
+           name="stock" value="" style="position:absolute;left:128px;top:182px;width:92px;height:92px;z-index:338;">
+    <input type="submit" id="customer_button"
+           onclick="ShowObjectWithEffect('wb_form_customer', 1, 'slideleft', 500);document.getElementById('service_button').disabled=true;document.getElementById('stock_button').disabled=true;document.getElementById('report_button').disabled=true;document.getElementById('logout_butt').disabled=true;return false;"
+           name="customer" value="" style="position:absolute;left:128px;top:274px;width:92px;height:92px;z-index:339;">
+    <input type="submit" id="report_button"
+           onclick="ShowObjectWithEffect('wb_form_report', 1, 'slideleft', 500);document.getElementById('service_button').disabled=true;document.getElementById('stock_button').disabled=true;document.getElementById('customer_button').disabled=true;document.getElementById('logout_butt').disabled=true;return false;"
+           name="report_exp" value=""
+           style="position:absolute;left:128px;top:366px;width:92px;height:92px;z-index:340;">
+    <input type="button" id="logout_butt" name="logout_butt" value="" onclick="btn_logout();"
+           style="position:absolute;left:128px;top:661px;width:92px;height:92px;z-index:356;">
+</div>
+
+<div id="wb_form_checkout"
+     style="position:absolute;left:220px;top:0px;width:1189px;height:753px;z-index:353;">
+    <input type="button" id="Button8" onclick="document.getElementById('Button8').disabled=true;return false;"
+           name="" value="Checkout"
+           style="position:absolute;left:0px;top:28px;width:280px;height:36px;z-index:273;">
+    <div id="wb_Shape61" style="position:absolute;left:17px;top:210px;width:1152px;height:5px;z-index:274;">
+        <img src="{% static 'images/img0066.png' %}" id="Shape61" alt="" style="width:1152px;height:5px;"></div>
+    <input type="button" id="Button56" onclick="document.getElementById('Button56').disabled=true;return false;"
+           name="" value="Bill To:"
+           style="position:absolute;left:40px;top:110px;width:300px;height:40px;z-index:276;" disabled>
+    <input type="button" id="Button57" onclick="document.getElementById('Button57').disabled=true;return false;"
+           name="" value="Date:" style="position:absolute;left:390px;top:110px;width:300px;height:40px;z-index:277;"
+           disabled>
+    <input type="button" id="Button58" name="" value="Recieved In Riel:"
+           style="position:absolute;left:40px;top:490px;width:300px;height:40px;z-index:280;" onclick="Change()">
+    <input type="submit" id="Button59" name="" value="Recieved In USD:"
+           style="position:absolute;left:390px;top:490px;width:300px;height:40px;z-index:282;" onclick="Change()">
+    <input type="button" id="Button60" onclick="document.getElementById('Button60').disabled=true;return false;"
+           name="" value="Change In Riel:"
+           style="position:absolute;left:40px;top:600px;width:300px;height:40px;z-index:284;">
+    <input type="button" id="Button61" onclick="document.getElementById('Button61').disabled=true;return false;"
+           name="" value="Change In USD:"
+           style="position:absolute;left:390px;top:600px;width:300px;height:40px;z-index:286;">
+    <input type="submit" id="Button50" onclick="document.getElementById('Button50').disabled=true;return false;"
+           name="" value="Total:"
+           style="position:absolute;left:830px;top:640px;width:115px;height:40px;z-index:290;">
+    <input type="text" id="Editbox27"
+           style="position:absolute;left:785px;top:490px;width:150px;height:31px;z-index:288;" name="Editbox21"
+           value="" readonly disabled spellcheck="false" placeholder="Sub Total: ">
+    <input type="text" id="Editbox28"
+           style="position:absolute;left:785px;top:590px;width:150px;height:31px;z-index:289;" name="Editbox22"
+           value="" readonly disabled spellcheck="false" placeholder="VAT: ">
+    <input type="text" id="Editbox28"
+           style="position:absolute;left:785px;top:540px;width:150px;height:31px;z-index:289;" name="Editbox21"
+           value="" readonly disabled spellcheck="false" placeholder="Discount: ">
+
+    <form name="form_stock" method="post" action="/main/" enctype="multipart/form-data"
+          id="form_checkout">
+        {% csrf_token %}
+        <input type="text" id="txtsellid" name="txtsellid" value="{{ sellid }}" style="display: none">
+        <input type="text" id="txtbox_billto"
+               style="position:absolute;left:40px;top:160px;width:290px;height:31px;z-index:275;" name="txtbox_billto"
+               value="{{ cid }}" readonly spellcheck="false" placeholder="">
+        <input type="text" id="txtbox_date"
+               style="position:absolute;left:390px;top:160px;width:300px;height:31px;z-index:278;" name="txtbox_date"
+               value="{{ date }}" readonly disabled spellcheck="false" placeholder="">
+        <table style="position:absolute;left:43px;top:240px;width:1103px;height:40px;z-index:279;" id="table_checkout">
+            <tr>
+                <td class="cell0"><p style="font-size:16px;line-height:18px;color:#FFFFFF;"><span
+                        style="background-color:#265A88;color:#FFFFFF;">Services &amp; Items</span></p>
+                </td>
+                <td class="cell1"><p style="font-size:16px;line-height:18px;color:#FFFFFF;"><span
+                        style="color:#FFFFFF;">Qty</span></p></td>
+                <td class="cell2"><p style="font-size:16px;line-height:18px;color:#FFFFFF;"><span
+                        style="color:#FFFFFF;">Price</span></p></td>
+                <td class="cell3"><p style="font-size:16px;line-height:18px;color:#FFFFFF;"><span
+                        style="color:#FFFFFF;">Total</span></p></td>
+            </tr>
+        </table>
+        <div class="table-wrapper-scroll-y my-custom-scrollbar1">
+            <table style="position:absolute;left:43px;top:0px;width:1103px;height:20px;z-index:279;"
+                   id="table_checkout" class="table table-bordered table-striped mb-0">
+                {% if selldetail %}
+                    {% for item in selldetail %}
+                        <tr>
+                            <td class="cell4"><input type="text" readonly id="checkout_pname_{{ forloop.counter0 }}"
+                                                     name="checkout_pname_{{ forloop.counter0 }}"
+                                                     value="{{ item.productid }}"
+                                                     style="border-style: none;width: 100%;text-align: center;"></td>
+                            <td class="cell5"><input type="text" readonly id="checkout_qty_{{ forloop.counter0 }}"
+                                                     name="checkout_qty_{{ forloop.counter0 }}" value="{{ item.qty }}"
+                                                     style="border-style: none;width: 100%;text-align: center;"></td>
+                            <td class="cell6"><input type="text" readonly id="checkout_price_{{ forloop.counter0 }}"
+                                                     name="checkout_price_{{ forloop.counter0 }}"
+                                                     value="{{ item.price }}"
+                                                     style="border-style: none;width: 100%;text-align: center;"></td>
+                            <td class="cell7"><input type="text" readonly id="checkout_total_{{ forloop.counter0 }}"
+                                                     name="checkout_total_{{ forloop.counter0 }}"
+                                                     value="{{ item.total }}"
+                                                     style="border-style: none;width: 100%;text-align: center;"></td>
+                        </tr>
+                    {% endfor %}
+                {% endif %}
+                <tr>
+                    <td class="cell4"><p style="font-size:11px;line-height:12px;color:#000000;"><span
+                            style="color:#000000;">&nbsp;</span></p></td>
+                    <td class="cell5"><p style="font-size:11px;line-height:12px;color:#000000;"><span
+                            style="color:#000000;">&nbsp;</span></p></td>
+                    <td class="cell6"><p style="font-size:11px;line-height:12px;color:#000000;"><span
+                            style="color:#000000;">&nbsp;</span></p></td>
+                    <td class="cell7"><p style="font-size:11px;line-height:12px;">&nbsp;</p></td>
+                </tr>
+            </table>
+        </div>
+
+        <input type="number" id="txtbox_InputRiel" step="0.01"
+               style="position:absolute;left:40px;top:540px;width:290px;height:31px;z-index:281;"
+               name="txtbox_InputRiel" value="0" spellcheck="false">
+        <input type="number" id="txtbox_InputUSD" step="0.01"
+               style="position:absolute;left:390px;top:540px;width:290px;height:31px;z-index:283;"
+               name="txtbox_InputUSD" value="0" spellcheck="false">
+
+        <input type="text" id="change_riel_txt"
+               style="position:absolute;left:40px;top:650px;width:290px;height:31px;z-index:285;" name="change_riel_txt"
+               value="0" readonly spellcheck="false" placeholder="0 Riel">
+        <input type="text" id="change_usd_txt"
+               style="position:absolute;left:390px;top:650px;width:290px;height:31px;z-index:287;" name="change_usd_txt"
+               value="0" readonly spellcheck="false" placeholder="0 USD">
+
+        <input type="text" id="subtotal_txt"
+               style="position:absolute;left:960px;top:490px;width:176px;height:31px;z-index:291;" name="subtotal_txt"
+               value="{{ total }} $ USD" readonly spellcheck="false" placeholder="$20.00 USD">
+        <input type="text" id="discount_txt"
+               style="position:absolute;left:960px;top:540px;width:150px;height:31px;z-index:292;" name="discount_txt"
+               value="{{ min }} $ USD" readonly spellcheck="false" placeholder="10%">
+        <input type="text" id="discount_txt"
+               style="position:absolute;left:960px;top:590px;width:150px;height:31px;z-index:292;" name="vat_txt"
+               value="{{ vat }} $ USD" readonly spellcheck="false" placeholder="10%">
+        <input type="text" id="total_txt"
+               style="position:absolute;left:960px;top:640px;width:176px;height:31px;z-index:293;" name="total_txt"
+               value="{{ all_total }} $ USD" readonly spellcheck="false" placeholder="$18.00 USD">
+
+        <input type="submit" id="print" name="print"
+               formaction="/print/" value="print" formtarget="_blank"
+               style="position:absolute;left:700px;top:690px;width:100px;height:40px;z-index:294;">
+        <input type="submit" id="butt_backcheckout"
+               formaction="/main/"
+               name="butt_backcheckout" value="Cancel"
+               style="position:absolute;left:40px;top:690px;width:300px;height:40px;z-index:294;">
+        <input type="submit" id="butt_checkout"
+               formaction="/recipt/" formtarget="_blank"
+               name="butt_checkout" value="Pay Now"
+               style="position:absolute;left:830px;top:690px;width:316px;height:40px;z-index:294;"
+               onclick="check_summit()">
+    </form>
+</div>
+
+</body>
+</html>
+
+<script>
+    function Change() {
+        document.getElementById('change_usd_txt').value = "";
+        document.getElementById('change_riel_txt').value = "";
+        var riel = document.getElementById('txtbox_InputRiel').value;
+        var dollar = document.getElementById('txtbox_InputUSD').value;
+        var total = document.getElementById('total_txt').value;
+        var R_D = (parseFloat(riel) / 4000).toFixed(2);
+        var change = (parseFloat(dollar) + parseFloat(R_D)) - parseFloat(total)
+        var change_str = change.toFixed(2)
+        var change_riel = change_str * 4000
+        document.getElementById('change_usd_txt').value = change_str
+        document.getElementById('change_riel_txt').value = change_riel
+    }
+
+    function check_summit() {
+        var change_d = document.getElementById("change_usd_txt").value;
+        var r_d = document.getElementById("txtbox_InputUSD").value;
+        var r_r = document.getElementById("txtbox_InputRiel").value;
+
+        if (r_d === '0' && r_r === '0') {
+            alert('Please makes some imput(s) in Riel or $ before summit again!!!');
+            event.preventDefault()
+            return false;
+        } else {
+            if (change_d === '0') {
+                alert('Please Summit the Recived Button!!!');
+                event.preventDefault()
+                return false;
+            } else
+                document.getElementById('butt_backcheckout').value = 'Close'
+                return true;
+        }
+
+    }
+</script>

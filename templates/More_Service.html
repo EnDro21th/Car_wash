@@ -1,0 +1,2181 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>More_Service</title>
+    <link href="{% static 'images/logo.png' %}" rel="icon" sizes="3474x3473" type="image/png">
+    <style>
+        #wb_form_service {
+            background-color: #FFFFFF;
+            background-image: none;
+            border: 0px solid #CCCCCC;
+        }
+
+        #Button5 {
+            border: 1px solid #2E6DA4;
+            border-radius: 50px;
+            background-color: #265A88;
+            background-image: none;
+            color: #FFFFFF;
+            font-family: Arial;
+            font-weight: bold;
+            font-style: italic;
+            font-size: 27px;
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        #Button7 {
+            border: 1px solid #4682B4;
+            border-radius: 100px;
+            background-color: #265A88;
+            background-image: url({% static 'images/back_48px.png' %});
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: 50px 50px;
+            color: #FFFFFF;
+            font-family: Arial;
+            font-weight: normal;
+            font-size: 13px;
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        #Button7:hover {
+            background-color: #4682B4;
+            box-shadow: 2px 2px 5px #265A88;
+            -webkit-transition: background-color 100ms linear 0ms, box-shadow 100ms linear 0ms;
+            -moz-transition: background-color 100ms linear 0ms, box-shadow 100ms linear 0ms;
+            transition: background-color 100ms linear 0ms, box-shadow 100ms linear 0ms;
+        }
+
+        #wb_Service {
+            background-color: #FFFFFF;
+            background-image: none;
+            border: 1px solid transparent;
+        }
+
+        #wb_butt_oilchanging {
+            transform: rotate(0deg);
+            transform-origin: 50% 50%;
+        }
+
+        #wb_butt_oilchanging a img {
+            position: absolute;
+            left: 0;
+        }
+
+        #wb_butt_oilchanging .default {
+            position: absolute;
+            left: 0;
+        }
+
+        #wb_butt_oilchanging a .hover {
+            visibility: hidden;
+        }
+
+        #wb_butt_oilchanging a:hover .hover {
+            visibility: visible;
+        }
+
+        #wb_butt_oilchanging a:hover .default {
+            visibility: hidden;
+        }
+
+        #butt_oilchanging_text {
+            position: absolute;
+            left: 5px;
+            top: 25px;
+            width: 253px;
+            height: 35px;
+            overflow: hidden;
+            text-align: right;
+            word-wrap: break-word;
+        }
+
+        #butt_oilchanging {
+            border-width: 0;
+            vertical-align: top;
+        }
+
+        #wb_butt_accessories {
+            transform: rotate(0deg);
+            transform-origin: 50% 50%;
+        }
+
+        #wb_butt_accessories a img {
+            position: absolute;
+            left: 0;
+        }
+
+        #wb_butt_accessories .default {
+            position: absolute;
+            left: 0;
+        }
+
+        #wb_butt_accessories a .hover {
+            visibility: hidden;
+        }
+
+        #wb_butt_accessories a:hover .hover {
+            visibility: visible;
+        }
+
+        #wb_butt_accessories a:hover .default {
+            visibility: hidden;
+        }
+
+        #butt_accessories_text {
+            position: absolute;
+            left: 5px;
+            top: 25px;
+            width: 248px;
+            height: 35px;
+            overflow: hidden;
+            text-align: right;
+            word-wrap: break-word;
+        }
+
+        #butt_accessories {
+            border-width: 0;
+            vertical-align: top;
+        }
+
+        #wb_butt_fooddrink {
+            transform: rotate(0deg);
+            transform-origin: 50% 50%;
+        }
+
+        #wb_butt_fooddrink a img {
+            position: absolute;
+            left: 0;
+        }
+
+        #wb_butt_fooddrink .default {
+            position: absolute;
+            left: 0;
+        }
+
+        #wb_butt_fooddrink a .hover {
+            visibility: hidden;
+        }
+
+        #wb_butt_fooddrink a:hover .hover {
+            visibility: visible;
+        }
+
+        #wb_butt_fooddrink a:hover .default {
+            visibility: hidden;
+        }
+
+        #butt_fooddrink_text {
+            position: absolute;
+            left: 5px;
+            top: 27px;
+            width: 248px;
+            height: 33px;
+            overflow: hidden;
+            text-align: right;
+            word-wrap: break-word;
+        }
+
+        #butt_fooddrink {
+            border-width: 0;
+            vertical-align: top;
+        }
+
+        #wb_Shape25 {
+            transform: rotate(0deg);
+            transform-origin: 50% 50%;
+        }
+
+        #wb_Shape25 a img {
+            position: absolute;
+            left: 0;
+        }
+
+        #wb_Shape25 .default {
+            position: absolute;
+            left: 0;
+        }
+
+        #wb_Shape25 a .hover {
+            visibility: hidden;
+        }
+
+        #wb_Shape25 a:hover .hover {
+            visibility: visible;
+        }
+
+        #wb_Shape25 a:hover .default {
+            visibility: hidden;
+        }
+
+        #Shape25 {
+            border-width: 0;
+            vertical-align: top;
+        }
+
+        #wb_Shape26 {
+            transform: rotate(0deg);
+            transform-origin: 50% 50%;
+        }
+
+        #wb_Shape26 a img {
+            position: absolute;
+            left: 0;
+        }
+
+        #wb_Shape26 .default {
+            position: absolute;
+            left: 0;
+        }
+
+        #wb_Shape26 a .hover {
+            visibility: hidden;
+        }
+
+        #wb_Shape26 a:hover .hover {
+            visibility: visible;
+        }
+
+        #wb_Shape26 a:hover .default {
+            visibility: hidden;
+        }
+
+        #Shape26 {
+            border-width: 0;
+            vertical-align: top;
+        }
+
+        #wb_Shape27 {
+            transform: rotate(0deg);
+            transform-origin: 50% 50%;
+        }
+
+        #wb_Shape27 a img {
+            position: absolute;
+            left: 0;
+        }
+
+        #wb_Shape27 .default {
+            position: absolute;
+            left: 0;
+        }
+
+        #wb_Shape27 a .hover {
+            visibility: hidden;
+        }
+
+        #wb_Shape27 a:hover .hover {
+            visibility: visible;
+        }
+
+        #wb_Shape27 a:hover .default {
+            visibility: hidden;
+        }
+
+        #Shape27 {
+            border-width: 0;
+            vertical-align: top;
+        }
+
+        #wb_Shape28 {
+            transform: rotate(0deg);
+            transform-origin: 50% 50%;
+        }
+
+        #wb_Shape28 a img {
+            position: absolute;
+            left: 0;
+        }
+
+        #wb_Shape28 .default {
+            position: absolute;
+            left: 0;
+        }
+
+        #wb_Shape28 a .hover {
+            visibility: hidden;
+        }
+
+        #wb_Shape28 a:hover .hover {
+            visibility: visible;
+        }
+
+        #wb_Shape28 a:hover .default {
+            visibility: hidden;
+        }
+
+        #Shape28 {
+            border-width: 0;
+            vertical-align: top;
+        }
+
+        #wb_butt_carwash {
+            transform: rotate(0deg);
+            transform-origin: 50% 50%;
+        }
+
+        #wb_butt_carwash a img {
+            position: absolute;
+            left: 0;
+        }
+
+        #wb_butt_carwash .default {
+            position: absolute;
+            left: 0;
+        }
+
+        #wb_butt_carwash a .hover {
+            visibility: hidden;
+        }
+
+        #wb_butt_carwash a:hover .hover {
+            visibility: visible;
+        }
+
+        #wb_butt_carwash a:hover .default {
+            visibility: hidden;
+        }
+
+        #wb_butt_carwash {
+            transform: rotate(0deg);
+            transform-origin: 50% 50%;
+        }
+
+        #wb_butt_carwash a img {
+            position: absolute;
+            left: 0;
+        }
+
+        #wb_butt_carwash .default {
+            position: absolute;
+            left: 0;
+        }
+
+        #wb_butt_carwash a .hover {
+            visibility: hidden;
+        }
+
+        #wb_butt_carwash a:hover .hover {
+            visibility: visible;
+        }
+
+        #wb_butt_carwash a:hover .default {
+            visibility: hidden;
+        }
+
+        #butt_carwash_text {
+            position: absolute;
+            left: 5px;
+            top: 25px;
+            width: 238px;
+            height: 35px;
+            overflow: hidden;
+            text-align: right;
+            word-wrap: break-word;
+        }
+
+        #butt_carwash {
+            border-width: 0;
+            vertical-align: top;
+        }
+
+        #wb_New_customer {
+            background-color: #FFFFFF;
+            background-image: none;
+            border: 1px solid transparent;
+        }
+
+        #wb_form_newcustomer {
+            background-color: #FFFFFF;
+            background-image: none;
+            border: 2px solid #265A88;
+            border-radius: 20px;
+        }
+
+        #Button49 {
+            border: 1px solid #2E6DA4;
+            border-radius: 50px;
+            background-color: #265A88;
+            background-image: none;
+            color: #FFFFFF;
+            font-family: Arial;
+            font-weight: bold;
+            font-style: italic;
+            font-size: 24px;
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        #txtbox_phonenumber_payment {
+            border: 2px solid #265A88;
+            border-radius: 50px;
+            background-color: transparent;
+            background-image: none;
+            color: #265A88;
+            font-family: Arial;
+            font-weight: normal;
+            font-size: 20px;
+            line-height: 28px;
+            padding: 4px 4px 4px 4px;
+            margin: 0;
+            text-align: left;
+        }
+
+        #txtbox_phonenumber_payment:focus {
+            border-color: #66AFE9;
+            box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.075), 0px 0px 8px rgba(102, 175, 233, 0.60);
+            outline: 0;
+        }
+
+        #txtbox_phonenumber_payment::placeholder {
+            color: #265A88;
+            opacity: 1;
+        }
+
+        #txtbox_phonenumber_payment::-ms-input-placeholder {
+            color: #265A88;
+        }
+
+        #butt_savepayment {
+            border: 1px solid #2E6DA4;
+            border-radius: 50px;
+            background-color: #265A88;
+            background-image: none;
+            color: #FFFFFF;
+            font-family: Arial;
+            font-weight: normal;
+            font-size: 24px;
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        #butt_savepayment:hover {
+            background-color: #4682B4;
+            box-shadow: 2px 2px 5px #265A88;
+            -webkit-transition: background-color 100ms linear 0ms, box-shadow 100ms linear 0ms;
+            -moz-transition: background-color 100ms linear 0ms, box-shadow 100ms linear 0ms;
+            transition: background-color 100ms linear 0ms, box-shadow 100ms linear 0ms;
+        }
+
+        #butt_checkoutpayment {
+            border: 1px solid #2E6DA4;
+            border-radius: 50px;
+            background-color: #265A88;
+            background-image: none;
+            color: #FFFFFF;
+            font-family: Arial;
+            font-weight: normal;
+            font-size: 24px;
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        #butt_checkoutpayment:hover {
+            background-color: #4682B4;
+            box-shadow: 2px 2px 5px #265A88;
+            -webkit-transition: background-color 100ms linear 0ms, box-shadow 100ms linear 0ms;
+            -moz-transition: background-color 100ms linear 0ms, box-shadow 100ms linear 0ms;
+            transition: background-color 100ms linear 0ms, box-shadow 100ms linear 0ms;
+        }
+
+        #table_payment, #table_payment_header {
+            border: 0px solid transparent;
+            background-color: #87CEEB;
+            background-image: none;
+            border-collapse: collapse;
+            border-spacing: 0px;
+            margin: 0;
+        }
+
+        #table_payment td, #table_payment_header td {
+            padding: 0;
+        }
+
+        #table_payment td div, #table_payment_header td div {
+            white-space: nowrap;
+        }
+
+        #table_payment p, #table_payment ul, #table_payment_header p, #table_payment_header ul {
+            margin: 0;
+            padding: 0;
+        }
+
+        #table_payment_header .cell0 {
+            background-color: #265A88;
+            background-image: none;
+            border: 1px #4682B4 solid;
+            text-align: center;
+            vertical-align: middle;
+            width: 198px;
+            height: 34px;
+            color: #FFFFFF;
+            font-family: Arial;
+            font-size: 20px;
+            line-height: 22.5px;
+        }
+
+        #table_payment_header .cell1 {
+            background-color: #265A88;
+            background-image: none;
+            border: 1px #4682B4 solid;
+            text-align: center;
+            vertical-align: middle;
+            width: 53px;
+            height: 34px;
+            color: #FFFFFF;
+            font-family: Arial;
+            font-size: 20px;
+            line-height: 22.5px;
+        }
+
+        #table_payment_header .cell2 {
+            background-color: #265A88;
+            background-image: none;
+            border: 1px #4682B4 solid;
+            text-align: center;
+            vertical-align: middle;
+            width: 66px;
+            height: 34px;
+            color: #FFFFFF;
+            font-family: Arial;
+            font-size: 20px;
+            line-height: 22.5px;
+        }
+
+        #table_payment_header .cellna {
+            background-color: #265A88;
+            background-image: none;
+            border: 1px #4682B4 solid;
+            text-align: center;
+            vertical-align: middle;
+            width: 53px;
+            height: 34px;
+            color: #FFFFFF;
+            font-family: Arial;
+            font-size: 20px;
+            line-height: 22.5px;
+        }
+
+        #table_payment .cell3 {
+            background-color: #FFFFFF;
+            background-image: none;
+            border: 1px #265A88 solid;
+            text-align: center;
+            vertical-align: middle;
+            width: 198px;
+            height: 40px;
+            color: #000000;
+            font-family: Arial;
+            font-size: 13px;
+            line-height: 16px;
+        }
+
+        #table_payment .cell4 {
+            background-color: #FFFFFF;
+            background-image: none;
+            border: 1px #265A88 solid;
+            text-align: center;
+            vertical-align: middle;
+            width: 53px;
+            height: 40px;
+            color: #000000;
+            font-family: Arial;
+            font-size: 13px;
+            line-height: 16px;
+        }
+
+        #table_payment .cell5 {
+            background-color: #FFFFFF;
+            background-image: none;
+            border: 1px #265A88 solid;
+            text-align: center;
+            vertical-align: middle;
+            width: 66px;
+            height: 40px;
+            color: #000000;
+            font-family: Arial;
+            font-size: 13px;
+            line-height: 16px;
+        }
+
+        #table_payment .cell6 {
+            background-color: #FFFFFF;
+            background-image: none;
+            border: 1px #265A88 solid;
+            text-align: center;
+            vertical-align: middle;
+            width: 53px;
+            height: 40px;
+            color: #000000;
+            font-family: Arial;
+            font-size: 13px;
+            line-height: 16px;
+        }
+
+        #table_payment .cell7 {
+            background-color: #FFFFFF;
+            background-image: none;
+            border: 1px #265A88 solid;
+            text-align: center;
+            vertical-align: middle;
+            width: 58px;
+            height: 30px;
+            color: #000000;
+            font-family: Arial;
+            font-size: 13px;
+            line-height: 16px;
+        }
+
+        #table_payment .cell8 {
+            background-color: #FFFFFF;
+            background-image: none;
+            border: 1px #265A88 solid;
+            text-align: center;
+            vertical-align: middle;
+            width: 76px;
+            height: 30px;
+            color: #000000;
+            font-family: Arial;
+            font-size: 13px;
+            line-height: 16px;
+        }
+
+        #table_payment tr:nth-child(odd) {
+            background-color: #FFFFFF;
+        }
+
+        #tbl_add_service_customer {
+            border: 0px solid transparent;
+        }
+
+        #tbl_add_service_customer .cell0 {
+            background-image: none;
+            margin-right: 5px;
+            text-align: center;
+            vertical-align: middle;
+            width: 380px;
+            height: 30px;
+            color: #FFFFFF;
+            font-family: Arial;
+            font-size: 20px;
+            line-height: 22.5px;
+        }
+
+        .btn_add_service {
+            background-color: #265A88;
+            border: none;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 5px 5px 3px 2px;
+            cursor: pointer;
+            width: 380px;
+            height: 80px;
+            border-radius: 12px;
+        }
+
+        .btn_add_service:hover {
+            background-color: #4682b4;
+        }
+
+        .my-custom-scrollbar-1 {
+            top: 10px;
+            margin-right: 8px;
+            position: relative;
+            height: 450px;
+            overflow: auto;
+        }
+
+        .my-custom-scrollbar {
+            top: 147px;
+            margin-right: 8px;
+            position: relative;
+            height: 260px;
+            overflow: auto;
+        }
+
+        .table-wrapper-scroll-y {
+            display: block;
+        }
+
+        .table-wrapper-scroll-y::-webkit-scrollbar {
+            width: 15px;
+
+        }
+
+        .table-wrapper-scroll-y::-webkit-scrollbar-track {
+            box-shadow: inset 0 0 5px grey;
+            border-radius: 10px;
+        }
+
+        .table-wrapper-scroll-y::-webkit-scrollbar-thumb {
+            background: #265A88;
+            border-radius: 10px;
+        }
+
+        .table-wrapper-scroll-y::-webkit-scrollbar-thumb:hover {
+            background: #4682b4;
+        }
+
+        .table-wrapper-scroll-y-1 {
+            display: block;
+        }
+
+        .table-wrapper-scroll-y-1::-webkit-scrollbar {
+            width: 15px;
+
+        }
+
+        .table-wrapper-scroll-y-1::-webkit-scrollbar-track {
+            box-shadow: inset 0 0 5px grey;
+            border-radius: 10px;
+        }
+
+        .table-wrapper-scroll-y-1::-webkit-scrollbar-thumb {
+            background: #265A88;
+            border-radius: 10px;
+        }
+
+        .table-wrapper-scroll-y-1::-webkit-scrollbar-thumb:hover {
+            background: #4682b4;
+        }
+
+        #wb_form_foods_drinks {
+            background-color: #265A88;
+            background-image: none;
+            border: 2px solid #265A88;
+            border-radius: 20px;
+        }
+
+        #wb_Carousel3 {
+            background-color: #FFFFFF;
+            background-image: none;
+            border: 2px solid transparent;
+            border-radius: 15px;
+        }
+
+        #Carousel3 .frame {
+            width: 419px;
+            display: inline-block;
+            float: left;
+            height: 473px;
+        }
+
+        #wb_Carousel3 .pagination {
+            bottom: 0;
+            left: 0;
+            position: absolute;
+            text-align: center;
+            vertical-align: middle;
+            width: 100%;
+            z-index: 998;
+        }
+
+        #wb_Carousel3 .pagination img {
+            border-style: none;
+            padding: 12px 12px 12px 12px;
+        }
+
+        #Carousel3_back img, #Carousel3_next img {
+            border-width: 0;
+        }
+
+        #Carousel3_back a, #Carousel3_next a {
+            cursor: pointer;
+        }
+
+        #wb_Shape37 a img {
+            position: absolute;
+            left: 0;
+        }
+
+        #wb_Shape37 .default {
+            position: absolute;
+            left: 0;
+        }
+
+        #wb_Shape37 a .hover {
+            visibility: hidden;
+        }
+
+        #wb_Shape37 a:hover .hover {
+            visibility: visible;
+        }
+
+        #wb_Shape37 a:hover .default {
+            visibility: hidden;
+        }
+
+        #wb_Shape39 a img {
+            position: absolute;
+            left: 0;
+        }
+
+        #wb_Shape39 .default {
+            position: absolute;
+            left: 0;
+        }
+
+        #wb_Shape39 a .hover {
+            visibility: hidden;
+        }
+
+        #wb_Shape39 a:hover .hover {
+            visibility: visible;
+        }
+
+        #wb_Shape39 a:hover .default {
+            visibility: hidden;
+        }
+
+        #wb_Shape40 a img {
+            position: absolute;
+            left: 0;
+        }
+
+        #wb_Shape40 .default {
+            position: absolute;
+            left: 0;
+        }
+
+        #wb_Shape40 a .hover {
+            visibility: hidden;
+        }
+
+        #wb_Shape40 a:hover .hover {
+            visibility: visible;
+        }
+
+        #wb_Shape40 a:hover .default {
+            visibility: hidden;
+        }
+
+        #wb_Shape41 a img {
+            position: absolute;
+            left: 0;
+        }
+
+        #wb_Shape41 .default {
+            position: absolute;
+            left: 0;
+        }
+
+        #wb_Shape41 a .hover {
+            visibility: hidden;
+        }
+
+        #wb_Shape41 a:hover .hover {
+            visibility: visible;
+        }
+
+        #wb_Shape41 a:hover .default {
+            visibility: hidden;
+        }
+
+        #Button53 {
+            border: 1px solid #265A88;
+            border-radius: 50px;
+            background-color: #265A88;
+            background-image: none;
+            color: #FFFFFF;
+            font-family: Arial;
+            font-weight: bold;
+            font-style: italic;
+            font-size: 24px;
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        #wb_form_oil {
+            background-color: #265A88;
+            background-image: none;
+            border: 2px solid #265A88;
+            border-radius: 20px;
+        }
+
+        #wb_Carousel4 {
+            background-color: #FFFFFF;
+            background-image: none;
+            border: 2px solid transparent;
+            border-radius: 15px;
+        }
+
+        #Carousel4 .frame {
+            width: 419px;
+            display: inline-block;
+            float: left;
+            height: 473px;
+        }
+
+        #wb_Carousel4 .pagination {
+            bottom: 0;
+            left: 0;
+            position: absolute;
+            text-align: center;
+            vertical-align: middle;
+            width: 100%;
+            z-index: 998;
+        }
+
+        #wb_Carousel4 .pagination img {
+            border-style: none;
+            padding: 12px 12px 12px 12px;
+        }
+
+        #Carousel4_back img, #Carousel4_next img {
+            border-width: 0;
+        }
+
+        #Carousel4_back a, #Carousel4_next a {
+            cursor: pointer;
+        }
+
+        #wb_Shape45 a img {
+            position: absolute;
+            left: 0;
+        }
+
+        #wb_Shape45 .default {
+            position: absolute;
+            left: 0;
+        }
+
+        #wb_Shape45 a .hover {
+            visibility: hidden;
+        }
+
+        #wb_Shape45 a:hover .hover {
+            visibility: visible;
+        }
+
+        #wb_Shape45 a:hover .default {
+            visibility: hidden;
+        }
+
+        #wb_Shape47 a img {
+            position: absolute;
+            left: 0;
+        }
+
+        #wb_Shape47 .default {
+            position: absolute;
+            left: 0;
+        }
+
+        #wb_Shape47 a .hover {
+            visibility: hidden;
+        }
+
+        #wb_Shape47 a:hover .hover {
+            visibility: visible;
+        }
+
+        #wb_Shape47 a:hover .default {
+            visibility: hidden;
+        }
+
+        #wb_Shape48 a img {
+            position: absolute;
+            left: 0;
+        }
+
+        #wb_Shape48 .default {
+            position: absolute;
+            left: 0;
+        }
+
+        #wb_Shape48 a .hover {
+            visibility: hidden;
+        }
+
+        #wb_Shape48 a:hover .hover {
+            visibility: visible;
+        }
+
+        #wb_Shape48 a:hover .default {
+            visibility: hidden;
+        }
+
+        #wb_Shape49 a img {
+            position: absolute;
+            left: 0;
+        }
+
+        #wb_Shape49 .default {
+            position: absolute;
+            left: 0;
+        }
+
+        #wb_Shape49 a .hover {
+            visibility: hidden;
+        }
+
+        #wb_Shape49 a:hover .hover {
+            visibility: visible;
+        }
+
+        #wb_Shape49 a:hover .default {
+            visibility: hidden;
+        }
+
+        #Button54 {
+            border: 1px solid #265A88;
+            border-radius: 50px;
+            background-color: #265A88;
+            background-image: none;
+            color: #FFFFFF;
+            font-family: Arial;
+            font-weight: bold;
+            font-style: italic;
+            font-size: 24px;
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        #wb_form_cartype {
+            background-color: #265A88;
+            background-image: none;
+            border: 2px solid #265A88;
+            border-radius: 20px;
+        }
+
+        #Button48 {
+            border: 1px solid #265A88;
+            border-radius: 50px;
+            background-color: #265A88;
+            background-image: none;
+            color: #FFFFFF;
+            font-family: Arial;
+            font-weight: bold;
+            font-style: italic;
+            font-size: 24px;
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        #wb_Carousel2 {
+            background-color: #FFFFFF;
+            background-image: none;
+            border: 2px solid transparent;
+            border-radius: 15px;
+        }
+
+        #Carousel2 .frame {
+            width: 419px;
+            display: inline-block;
+            float: left;
+            height: 473px;
+        }
+
+        #wb_Carousel2 .pagination {
+            bottom: 0;
+            left: 0;
+            position: absolute;
+            text-align: center;
+            vertical-align: middle;
+            width: 100%;
+            z-index: 998;
+        }
+
+        #wb_Carousel2 .pagination img {
+            border-style: none;
+            padding: 12px 12px 12px 12px;
+        }
+
+        #Carousel2_back img, #Carousel2_next img {
+            border-width: 0;
+        }
+
+        #Carousel2_back a, #Carousel2_next a {
+            cursor: pointer;
+        }
+
+        #wb_Shape29 a img {
+            position: absolute;
+            left: 0;
+        }
+
+        #wb_Shape29 .default {
+            position: absolute;
+            left: 0;
+        }
+
+        #wb_Shape29 a .hover {
+            visibility: hidden;
+        }
+
+        #wb_Shape29 a:hover .hover {
+            visibility: visible;
+        }
+
+        #wb_Shape29 a:hover .default {
+            visibility: hidden;
+        }
+
+        #wb_Shape31 a img {
+            position: absolute;
+            left: 0;
+        }
+
+        #wb_Shape31 .default {
+            position: absolute;
+            left: 0;
+        }
+
+        #wb_Shape31 a .hover {
+            visibility: hidden;
+        }
+
+        #wb_Shape31 a:hover .hover {
+            visibility: visible;
+        }
+
+        #wb_Shape31 a:hover .default {
+            visibility: hidden;
+        }
+
+        #wb_Shape32 a img {
+            position: absolute;
+            left: 0;
+        }
+
+        #wb_Shape32 .default {
+            position: absolute;
+            left: 0;
+        }
+
+        #wb_Shape32 a .hover {
+            visibility: hidden;
+        }
+
+        #wb_Shape32 a:hover .hover {
+            visibility: visible;
+        }
+
+        #wb_Shape32 a:hover .default {
+            visibility: hidden;
+        }
+
+        #wb_Shape33 a img {
+            position: absolute;
+            left: 0;
+        }
+
+        #wb_Shape33 .default {
+            position: absolute;
+            left: 0;
+        }
+
+        #wb_Shape33 a .hover {
+            visibility: hidden;
+        }
+
+        #wb_Shape33 a:hover .hover {
+            visibility: visible;
+        }
+
+        #wb_Shape33 a:hover .default {
+            visibility: hidden;
+        }
+
+        #wb_form_accessories {
+            background-color: #265A88;
+            background-image: none;
+            border: 2px solid #265A88;
+            border-radius: 20px;
+        }
+
+        #wb_Carousel5 {
+            background-color: #FFFFFF;
+            background-image: none;
+            border: 2px solid transparent;
+            border-radius: 15px;
+        }
+
+        #Carousel5 .frame {
+            width: 419px;
+            display: inline-block;
+            float: left;
+            height: 473px;
+        }
+
+        #wb_Carousel5 .pagination {
+            bottom: 0;
+            left: 0;
+            position: absolute;
+            text-align: center;
+            vertical-align: middle;
+            width: 100%;
+            z-index: 998;
+        }
+
+        #wb_Carousel5 .pagination img {
+            border-style: none;
+            padding: 12px 12px 12px 12px;
+        }
+
+        #Carousel5_back img, #Carousel5_next img {
+            border-width: 0;
+        }
+
+        #Carousel5_back a, #Carousel5_next a {
+            cursor: pointer;
+        }
+
+        #wb_Shape53 a img {
+            position: absolute;
+            left: 0;
+        }
+
+        #wb_Shape53 .default {
+            position: absolute;
+            left: 0;
+        }
+
+        #wb_Shape53 a .hover {
+            visibility: hidden;
+        }
+
+        #wb_Shape53 a:hover .hover {
+            visibility: visible;
+        }
+
+        #wb_Shape53 a:hover .default {
+            visibility: hidden;
+        }
+
+        #wb_Shape55 a img {
+            position: absolute;
+            left: 0;
+        }
+
+        #wb_Shape55 .default {
+            position: absolute;
+            left: 0;
+        }
+
+        #wb_Shape55 a .hover {
+            visibility: hidden;
+        }
+
+        #wb_Shape55 a:hover .hover {
+            visibility: visible;
+        }
+
+        #wb_Shape55 a:hover .default {
+            visibility: hidden;
+        }
+
+        #wb_Shape56 a img {
+            position: absolute;
+            left: 0;
+        }
+
+        #wb_Shape56 .default {
+            position: absolute;
+            left: 0;
+        }
+
+        #wb_Shape56 a .hover {
+            visibility: hidden;
+        }
+
+        #wb_Shape56 a:hover .hover {
+            visibility: visible;
+        }
+
+        #wb_Shape56 a:hover .default {
+            visibility: hidden;
+        }
+
+        #wb_Shape57 a img {
+            position: absolute;
+            left: 0;
+        }
+
+        #wb_Shape57 .default {
+            position: absolute;
+            left: 0;
+        }
+
+        #wb_Shape57 a .hover {
+            visibility: hidden;
+        }
+
+        #wb_Shape57 a:hover .hover {
+            visibility: visible;
+        }
+
+        #wb_Shape57 a:hover .default {
+            visibility: hidden;
+        }
+
+        #Button55 {
+            border: 1px solid #265A88;
+            border-radius: 50px;
+            background-color: #265A88;
+            background-image: none;
+            color: #FFFFFF;
+            font-family: Arial;
+            font-weight: bold;
+            font-style: italic;
+            font-size: 24px;
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        #wb_Shape3 {
+            transform: rotate(0deg);
+            transform-origin: 50% 50%;
+        }
+
+        #Shape3 {
+            border-width: 0;
+            vertical-align: top;
+        }
+
+        #wb_Shape1 {
+            transform: rotate(0deg);
+            transform-origin: 50% 50%;
+        }
+
+        #Shape1 {
+            border-width: 0;
+            vertical-align: top;
+        }
+
+        #wb_Shape2 {
+            transform: rotate(0deg);
+            transform-origin: 50% 50%;
+        }
+
+        #Shape2 {
+            border-width: 0;
+            vertical-align: top;
+        }
+
+        #service_button {
+            border: 1px solid #265A88;
+            background-color: #265A88;
+            background-image: url({% static 'images/services_60px.png' %});
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: 50px 50px;
+            color: #FFFFFF;
+            font-family: Arial;
+            font-weight: normal;
+            font-size: 13px;
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        #service_button:hover {
+            background-color: #4682B4;
+            box-shadow: -2px -2px 5px #265A88 inset;
+            -webkit-transition: background-color 100ms ease 0ms, box-shadow 100ms ease 0ms;
+            -moz-transition: background-color 100ms ease 0ms, box-shadow 100ms ease 0ms;
+            transition: background-color 100ms ease 0ms, box-shadow 100ms ease 0ms;
+        }
+
+        #wb_Shape4 {
+            transform: rotate(0deg);
+            transform-origin: 50% 50%;
+        }
+
+        #Shape4 {
+            border-width: 0;
+            vertical-align: top;
+        }
+
+        #service_button {
+            border: 1px solid #265A88;
+            background-color: #265A88;
+            background-image: url({% static 'images/services_60px.png' %});
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: 50px 50px;
+            color: #FFFFFF;
+            font-family: Arial;
+            font-weight: normal;
+            font-size: 13px;
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        #service_button:hover {
+            background-color: #4682B4;
+            box-shadow: -2px -2px 5px #265A88 inset;
+            -webkit-transition: background-color 100ms ease 0ms, box-shadow 100ms ease 0ms;
+            -moz-transition: background-color 100ms ease 0ms, box-shadow 100ms ease 0ms;
+            transition: background-color 100ms ease 0ms, box-shadow 100ms ease 0ms;
+        }
+
+        #wb_Shape4 {
+            transform: rotate(0deg);
+            transform-origin: 50% 50%;
+        }
+
+        #Shape4 {
+            border-width: 0;
+            vertical-align: top;
+        }
+
+        #wb_Image1 {
+            vertical-align: top;
+        }
+
+        #Image1 {
+            border: 0px solid #000000;
+            padding: 0;
+            margin: 0;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        #stock_button {
+            border: 1px solid #265A88;
+            background-color: #265A88;
+            background-image: url({% static 'images/inventory_flow_128px.png' %});
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: 50px 50px;
+            color: #FFFFFF;
+            font-family: Arial;
+            font-weight: normal;
+            font-size: 13px;
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        #stock_button:hover {
+            background-color: #4682B4;
+            box-shadow: -2px -2px 5px #265A88 inset;
+            -webkit-transition: background-color 100ms ease 0ms, box-shadow 100ms ease 0ms;
+            -moz-transition: background-color 100ms ease 0ms, box-shadow 100ms ease 0ms;
+            transition: background-color 100ms ease 0ms, box-shadow 100ms ease 0ms;
+        }
+
+        #customer_button {
+            border: 1px solid #265A88;
+            background-color: #265A88;
+            background-image: url({% static 'images/customer_insight_60px.png' %});
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: 50px 50px;
+            color: #FFFFFF;
+            font-family: Arial;
+            font-weight: normal;
+            font-size: 13px;
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        #customer_button:hover {
+            background-color: #4682B4;
+            box-shadow: -2px -2px 5px #265A88 inset;
+            -webkit-transition: background-color 100ms ease 0ms, box-shadow 100ms ease 0ms;
+            -moz-transition: background-color 100ms ease 0ms, box-shadow 100ms ease 0ms;
+            transition: background-color 100ms ease 0ms, box-shadow 100ms ease 0ms;
+        }
+
+        #report_button {
+            border: 1px solid #265A88;
+            background-color: #265A88;
+            background-image: url({% static 'images/cashbook_128px.png' %});
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: 50px 50px;
+            color: #FFFFFF;
+            font-family: Arial;
+            font-weight: normal;
+            font-size: 13px;
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        #report_button:hover {
+            background-color: #4682B4;
+            box-shadow: -2px -2px 5px #265A88 inset;
+            -webkit-transition: background-color 100ms ease 0ms, box-shadow 100ms ease 0ms;
+            -moz-transition: background-color 100ms ease 0ms, box-shadow 100ms ease 0ms;
+            transition: background-color 100ms ease 0ms, box-shadow 100ms ease 0ms;
+        }
+
+        #logout_butt {
+            border: 1px solid #2C2B3C;
+            background-color: transparent;
+            background-image: url({% static 'images/shutdown_52px.png' %});
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: 50px 50px;
+            color: #FFFFFF;
+            font-family: Arial;
+            font-weight: normal;
+            font-size: 13px;
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        #logout_butt:hover {
+            background-color: #800000;
+            box-shadow: -2px -2px 5px #4F4F4F inset;
+            -webkit-transition: background-color 100ms ease 0ms, box-shadow 100ms ease 0ms;
+            -moz-transition: background-color 100ms ease 0ms, box-shadow 100ms ease 0ms;
+            transition: background-color 100ms ease 0ms, box-shadow 100ms ease 0ms;
+        }
+
+        .btndelete {
+            background-color: darkred;
+            border: none;
+            color: white;
+            width: 45px;
+            height: 30px;
+            text-align: center;
+            font-size: 20px;
+            opacity: 0.6;
+            transition: 0.3s;
+            display: inline-block;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .btndelete:hover {
+            opacity: 1
+        }
+
+
+    </style>
+    <script src="{% static 'jquery-1.12.4.min.js' %}"></script>
+    <script src="{% static 'jquery-ui.min.js' %}"></script>
+    <script src="{% static 'wb.carousel.min.js' %}"></script>
+    <script src="{% static 'wb.carousel.effects.min.js' %}"></script>
+    <script src="{% static 'searchindex.js' %}"></script>
+    <script src="{% static 'wb.sitesearch.min.js' %}"></script>
+    <script src="{% static 'wwb15.min.js' %}"></script>
+</head>
+<body onload="refresh_table()">
+<div id="wb_Shape3" style="position:absolute;left:0px;top:0px;width:1536px;height:753px;z-index:332;">
+    <img src="{% static 'images/img0001.png' %}" id="Shape3" alt="" style="width:1536px;height:753px;"></div>
+<div id="wb_Shape1" style="position:absolute;left:129px;top:0px;width:1280px;height:753px;z-index:333;">
+    <img src="{% static 'images/img0007.png' %}" id="Shape1" alt="" style="width:1280px;height:753px;"></div>
+<div id="wb_Shape2" style="position:absolute;left:128px;top:0px;width:92px;height:753px;z-index:334;">
+    <img src="{% static 'images/img0006.png' %}" id="Shape2" alt="" style="width:92px;height:753px;"></div>
+<input type="submit" id="service_button"
+       name="service" value="" style="position:absolute;left:128px;top:90px;width:92px;height:92px;z-index:335;">
+<div id="wb_Shape4" style="position:absolute;left:128px;top:0px;width:92px;height:92px;z-index:336;">
+    <img src="{% static 'images/img0008.png' %}" id="Shape4" alt="" style="width:92px;height:92px;"></div>
+<div id="wb_Image1" style="position:absolute;left:129px;top:7px;width:92px;height:92px;z-index:337;">
+    <img src="{% static 'images/logo.png' %}" id="Image1" alt=""></div>
+<input type="submit" id="stock_button"
+       name="stock" value="" style="position:absolute;left:128px;top:182px;width:92px;height:92px;z-index:338;">
+<input type="submit" id="customer_button"
+       name="customer" value="" style="position:absolute;left:128px;top:274px;width:92px;height:92px;z-index:339;">
+<input type="submit" id="report_button"
+       name="report_exp" value="" style="position:absolute;left:128px;top:366px;width:92px;height:92px;z-index:340;">
+<input type="button" id="logout_butt" name="logout_butt" value=""
+       style="position:absolute;left:128px;top:661px;width:92px;height:92px;z-index:356;">
+
+<div id="wb_form_service"
+     style="position:absolute;left:220px;top:0px;width:1189px;height:753px;z-index:342;">
+    <form name="form_stock" method="post" action="" enctype="multipart/form-data"
+          id="form_service">
+        {% csrf_token %}
+        <input type="button" id="Button5" onclick="document.getElementById('Button5').disabled=true;return false;"
+               name="" value="Service" style="position:absolute;left:0px;top:28px;width:230px;height:36px;z-index:80;">
+        <input type="submit" id="Button7"
+               formaction="/main/"
+               name="" value="" style="position:absolute;left:1130px;top:690px;width:50px;height:50px;z-index:81;">
+        {#        form header#}
+        <div id="wb_Service"
+             style="position:absolute;left:9px;top:72px;width:1170px;height:110px;z-index:82;">
+            <form name="Form1" method="post" action="" enctype="multipart/form-data"
+                  id="Service">
+                <div id="wb_butt_carwash"
+                     style="position:absolute;left:29px;top:15px;width:270px;height:77px;z-index:21;">
+                    <a href=""
+                       onclick="ShowObjectWithEffect('wb_form_accessories', 0, 'slideleft', 500);ShowObjectWithEffect('wb_form_oil', 0, 'slideleft', 500);ShowObjectWithEffect('wb_form_cartype', 1, 'slideright', 500);ShowObjectWithEffect('wb_form_foods_drinks', 0, 'slideleft', 500);return false;">
+                        <img class="hover" src="{% static 'images/img0028_hover.png' %}" alt=""
+                             style="border-width:0;width:270px;height:77px;">
+                        <span class="default">
+                            <img src="{% static 'images/img0028.png' %}" id="butt_carwash" alt=""
+                                 style="width:270px;height:77px;">
+                        </span>
+                        <div id="butt_carwash_text"><span
+                                style="color:#FFFFFF;font-family:Arial;font-size:27px;"><strong>Car Wash</strong></span>
+                        </div>
+                    </a></div>
+                <div id="wb_butt_oilchanging"
+                     style="position:absolute;left:309px;top:15px;width:270px;height:77px;z-index:22;">
+                    <a href=""
+                       onclick="ShowObjectWithEffect('wb_form_accessories', 0, 'slideleft', 500);ShowObjectWithEffect('wb_form_foods_drinks', 0, 'slideleft', 500);ShowObjectWithEffect('wb_form_cartype', 0, 'slideleft', 500);ShowObjectWithEffect('wb_form_oil', 1, 'slideright', 500);return false;"><img
+                            class="hover" src="{% static 'images/img0026_hover.png' %}" alt=""
+                            style="border-width:0;width:270px;height:77px;"><span class="default"><img
+                            src="{% static 'images/img0026.png' %}" id="butt_oilchanging" alt=""
+                            style="width:270px;height:77px;"></span>
+                        <div id="butt_oilchanging_text"><span
+                                style="color:#FFFFFF;font-family:Arial;font-size:27px;"><strong>Oil Changing</strong></span>
+                        </div>
+                    </a></div>
+                <div id="wb_butt_accessories"
+                     style="position:absolute;left:869px;top:15px;width:270px;height:77px;z-index:23;">
+                    <a href=""
+                       onclick="ShowObjectWithEffect('wb_form_foods_drinks', 0, 'slideleft', 500);ShowObjectWithEffect('wb_form_cartype', 0, 'slideleft', 500);ShowObjectWithEffect('wb_form_oil', 0, 'slideleft', 500);ShowObjectWithEffect('wb_form_accessories', 1, 'slideright', 500);return false;"><img
+                            class="hover" src="{% static 'images/img0027_hover.png' %}" alt=""
+                            style="border-width:0;width:270px;height:77px;"><span class="default"><img
+                            src="{% static 'images/img0027.png' %}" id="butt_accessories" alt=""
+                            style="width:270px;height:77px;"></span>
+                        <div id="butt_accessories_text"><span
+                                style="color:#FFFFFF;font-family:Arial;font-size:27px;"><strong>Accessories</strong></span>
+                        </div>
+                    </a></div>
+                <div id="wb_butt_fooddrink"
+                     style="position:absolute;left:589px;top:15px;width:270px;height:77px;z-index:24;">
+                    <a href=""
+                       onclick="ShowObjectWithEffect('wb_form_accessories', 0, 'slideleft', 500);ShowObjectWithEffect('wb_form_oil', 0, 'slideleft', 500);ShowObjectWithEffect('wb_form_foods_drinks', 1, 'slideright', 500);ShowObjectWithEffect('wb_form_cartype', 0, 'slideleft', 500);return false;"><img
+                            class="hover" src="{% static 'images/img0029_hover.png' %}" alt=""
+                            style="border-width:0;width:270px;height:77px;"><span class="default"><img
+                            src="{% static 'images/img0029.png' %}" id="butt_fooddrink" alt=""
+                            style="width:270px;height:77px;"></span>
+                        <div id="butt_fooddrink_text"><span
+                                style="color:#FFFFFF;font-family:Arial;font-size:21px;"><strong>Foods &amp; Drinks</strong></span>
+                        </div>
+                    </a></div>
+                <div id="wb_Shape25" style="position:absolute;left:41px;top:18px;width:75px;height:75px;z-index:25;">
+                    <a href=""
+                       onclick="ShowObjectWithEffect('wb_form_accessories', 0, 'slideleft', 500);ShowObjectWithEffect('wb_form_oil', 0, 'slideleft', 500);ShowObjectWithEffect('wb_form_cartype', 1, 'slideright', 500);ShowObjectWithEffect('wb_form_foods_drinks', 0, 'slideleft', 500);return false;"><img
+                            class="hover" src="{% static 'images/img0030_hover.png' %}" alt=""
+                            style="border-width:0;width:75px;height:75px;"><span class="default"><img
+                            src="{% static 'images/img0030.png' %}" id="Shape25" alt="" style="width:75px;height:75px;"></span></a>
+                </div>
+                <div id="wb_Shape26" style="position:absolute;left:321px;top:15px;width:75px;height:75px;z-index:26;">
+                    <a href=""
+                       onclick="ShowObjectWithEffect('wb_form_accessories', 0, 'slideleft', 500);ShowObjectWithEffect('wb_form_foods_drinks', 0, 'slideleft', 500);ShowObjectWithEffect('wb_form_cartype', 0, 'slideleft', 500);ShowObjectWithEffect('wb_form_oil', 1, 'slideright', 500);return false;"><img
+                            class="hover" src="{% static 'images/img0031_hover.png' %}" alt=""
+                            style="border-width:0;width:75px;height:75px;"><span class="default"><img
+                            src="{% static 'images/img0031.png' %}" id="Shape26" alt="" style="width:75px;height:75px;"></span></a>
+                </div>
+                <div id="wb_Shape27" style="position:absolute;left:601px;top:18px;width:75px;height:75px;z-index:27;">
+                    <a href=""
+                       onclick="ShowObjectWithEffect('wb_form_accessories', 0, 'slideleft', 500);ShowObjectWithEffect('wb_form_oil', 0, 'slideleft', 500);ShowObjectWithEffect('wb_form_foods_drinks', 1, 'slideright', 500);ShowObjectWithEffect('wb_form_cartype', 0, 'slideleft', 500);return false;"><img
+                            class="hover" src="{% static 'images/img0032_hover.png' %}" alt=""
+                            style="border-width:0;width:75px;height:75px;"><span class="default"><img
+                            src="{% static 'images/img0032.png' %}" id="Shape27" alt="" style="width:75px;height:75px;"></span></a>
+                </div>
+                <div id="wb_Shape28" style="position:absolute;left:881px;top:16px;width:75px;height:75px;z-index:28;">
+                    <a href=""
+                       onclick="ShowObjectWithEffect('wb_form_foods_drinks', 0, 'slideleft', 500);ShowObjectWithEffect('wb_form_cartype', 0, 'slideleft', 500);ShowObjectWithEffect('wb_form_oil', 0, 'slideleft', 500);ShowObjectWithEffect('wb_form_accessories', 1, 'slideright', 500);return false;"><img
+                            class="hover" src="{% static 'images/img0033_hover.png' %}" alt=""
+                            style="border-width:0;width:75px;height:75px;"><span class="default"><img
+                            src="{% static 'images/img0033.png' %}" id="Shape28" alt="" style="width:75px;height:75px;"></span></a>
+                </div>
+            </form>
+        </div>
+        {#        #form customer items list#}
+        <div id="wb_New_customer"
+             style="position:absolute;left:9px;top:184px;width:588px;height:554px;z-index:84;">
+            <div id="wb_form_newcustomer"
+                 style="position:absolute;left:70px;top:15px;width:430px;height:530px;z-index:39;">
+                <input type="button" id="Button49"
+                       onclick="document.getElementById('Button49').disabled=true;return false;" name=""
+                       value="Payment"
+                       style="position:absolute;left:78px;top:8px;width:290px;height:36px;z-index:34;">
+                <table style="position:absolute;left:28px;top:110px;width:370px;height:40px;z-index:38;"
+                       id="table_payment_header">
+                    <tr>
+                        <td class="cell0"><p style="font-size:16px;line-height:18px;color:#FFFFFF;"><span
+                                style="background-color:#265A88;color:#FFFFFF;">Services & Items</span></p>
+                        </td>
+                        <td class="cell1"><p style="font-size:16px;line-height:18px;color:#FFFFFF;"><span
+                                style="color:#FFFFFF;">Qty</span></p></td>
+                        <td class="cell2"><p style="font-size:16px;line-height:18px;color:#FFFFFF;"><span
+                                style="color:#FFFFFF;">Price</span></p></td>
+                        <td class="cellna"><p style="font-size:16px;line-height:18px;color:#FFFFFF;"><span
+                                style="color:#FFFFFF;"></span></p></td>
+                    </tr>
+                </table>
+                <form name="form_newcustomer" method="post" action=""
+                      enctype="multipart/form-data" id="form_newcustomer">
+                    {% csrf_token %}
+                    <input type="text" id="sellid" name="sellid" value="{{ sellid }}"
+                           style="border-style: none; color: black; display: none">
+                    <input type="text" id="data_post_ser" name="data_post_ser"
+                           style="border-style: none; color: black;display: none ">
+                    <input type="number" id="txtbox_phonenumber_payment"
+                           style="position:absolute;left:20px;top:58px;width:378px;height:28px;z-index:35;text-align: center"
+                           name="txtbox_phonenumber_payment" value="{{ cid }}" spellcheck="false"
+                           placeholder="Phone Number:">
+                    <input type="submit" id="butt_checkoutpayment"
+                           name="butt_checkoutpayment" value="Check Out"
+                           formaction="/checkout_more_service/"
+                           style="position:absolute;left:18px;top:478px;width:390px;height:36px;z-index:36;">
+                    <input type="submit" id="butt_savepayment"
+                           name="butt_savepayment" value="Save"
+                           formaction="/save_service/"
+                           style="position:absolute;left:18px;top:425px;width:390px;height:36px;z-index:37;">
+                    <div class="table-wrapper-scroll-y my-custom-scrollbar">
+                        <table style="position:absolute;left:28px;top:0px;width:370px;height:20px;z-index:38;"
+                               id="table_payment" class="table table-bordered table-striped mb-0">
+                            {% if selldetail %}
+                                {% for item in selldetail %}
+                                    <tr>
+                                        <td class='cell3'><input name='pname_service_{{ forloop.counter0 }}'
+                                                                 id='pname_service_{{ forloop.counter0 }}' readonly
+                                                                 style='border-style: none; width:100%; text-align: center;'
+                                                                 value='{{ item.productid }}'/></td>
+                                        <td class='cell4'><input type='number' min='1'
+                                                                 name='qty_service_{{ forloop.counter0 }}'
+                                                                 id='qty_service_{{ forloop.counter0 }}'
+                                                                 onkeydown='return false'
+                                                                 style='border-style: none; width:100%; text-align: center;'
+                                                                 value='{{ item.qty }}'
+                                                                 onkeydown='return false'/></td>
+                                        <td class='cell5'><input name='cost_service_{{ forloop.counter0 }}'
+                                                                 id='cost_service_{{ forloop.counter0 }}' readonly
+                                                                 style='border-style: none; width:100%; text-align: center;'
+                                                                 value='{{ item.price }}'/></td>
+                                        <td class="cell6">
+                                            <button type='button' onclick='delete_row_service(this);'
+                                                    class='btndelete'> &nbspX&nbsp
+                                            </button>
+                                        </td>
+                                    </tr>
+                                {% endfor %}
+                            {% endif %}
+                            <tr>
+                                <td class="cell3"><p style="font-size:11px;line-height:12px;color:#000000;"><span
+                                        style="color:#000000;">&nbsp;</span></p></td>
+                                <td class="cell4"><p style="font-size:11px;line-height:12px;color:#000000;"><span
+                                        style="color:#000000;">&nbsp;</span></p></td>
+                                <td class="cell5"><p style="font-size:11px;line-height:12px;color:#000000;"><span
+                                        style="color:#000000;">&nbsp;</span></p></td>
+                                <td class="cell6"><p style="font-size:11px;line-height:12px;color:#000000;"><span
+                                        style="color:#000000;">&nbsp;</span></p></td>
+                            </tr>
+                        </table>
+                    </div>
+                </form>
+            </div>
+        </div>
+        {#        #form selection items#}
+        <div id="wb_form_foods_drinks"
+             style="position:absolute;visibility:hidden;left:630px;top:200px;width:428px;height:530px;z-index:87;">
+            <form name="form_cartype" method="post" action=""
+                  enctype="multipart/form-data" id="form_foods_drinks">
+                <div id="wb_Carousel3"
+                     style="position:absolute;left:4px;top:52px;width:415px;height:469px;z-index:48;overflow:hidden;">
+                    <div id="Carousel3" style="position:absolute;">
+                        <div class="frame">
+                            <div class="table-wrapper-scroll-y-1 my-custom-scrollbar-1">
+                                <input type="text" id="txt_drink_type_count" value="{{ drinktype.count }}"
+                                       style="display: none">
+                                <table style="position:absolute;left:0px;width:400px;height:120px;z-index:38;"
+                                       id="tbl_add_service_customer">
+                                    {% if drinktype %}
+                                        {% for x1  in drinktype %}
+                                            <tr>
+                                                <td class="cell0">
+                                                    <input type="button" class="btn_add_service"
+                                                           onclick="add_row_service3(this);"
+                                                           style="font-size: 35px;font-weight: bold"
+                                                           id="drink_type_{{ forloop.counter0 }}"
+                                                           value="{{ x1.productname }} $ {{ x1.unitprice }}">
+                                                </td>
+                                            </tr>
+                                        {% endfor %}
+                                    {% endif %}
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <input type="submit" id="Button53"
+                       onclick="document.getElementById('Button53').disabled=true;return false;" name=""
+                       value="Foods & Drinks"
+                       style="position:absolute;left:67px;top:8px;width:290px;height:36px;z-index:49;">
+            </form>
+        </div>
+        <div id="wb_form_cartype"
+             style="position:absolute;visibility:hidden;left:630px;top:200px;width:428px;height:530px;z-index:88;">
+            <form name="form_cartype" method="post" action=""
+                  enctype="multipart/form-data" id="form_cartype">
+                <div id="wb_Carousel2"
+                     style="position:absolute;left:4px;top:52px;width:415px;height:469px;z-index:58;overflow:hidden;">
+                    <div id="Carousel2" style="position:absolute;">
+                        <div class="frame">
+                            <div class="table-wrapper-scroll-y-1 my-custom-scrollbar-1">
+                                <input type="text" id="txt_car_type_count" value="{{ cartype.count }}"
+                                       style="display: none">
+                                <table style="position:absolute;left:0px;width:400px;height:120px;z-index:38;"
+                                       id="tbl_add_service_customer">
+                                    {% if cartype %}
+                                        {% for x2  in cartype %}
+                                            <tr>
+                                                <td class="cell0">
+                                                    <input type="button" class="btn_add_service"
+                                                           onclick="add_row_service(this);"
+                                                           style="font-size: 35px;font-weight: bold"
+                                                           id="car_type_{{ forloop.counter0 }}"
+                                                           value="{{ x2.productname }} $ {{ x2.unitprice }}">
+                                                </td>
+                                            </tr>
+                                        {% endfor %}
+                                    {% endif %}
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <input type="button" id="Button48"
+                       onclick="document.getElementById('Button48').disabled=true;return false;" name=""
+                       value="Car Type"
+                       style="position:absolute;left:67px;top:8px;width:290px;height:36px;z-index:59;">
+            </form>
+
+        </div>
+        <div id="wb_form_oil"
+             style="position:absolute;visibility:hidden;left:630px;top:200px;width:428px;height:530px;z-index:89;">
+            <form name="form_oil" method="post" action="" enctype="multipart/form-data"
+                  id="form_oil">
+                <div id="wb_Carousel4"
+                     style="position:absolute;left:4px;top:52px;width:415px;height:469px;z-index:68;overflow:hidden;">
+                    <div id="Carousel4" style="position:absolute;">
+                        <div class="frame">
+                            <div class="table-wrapper-scroll-y-1 my-custom-scrollbar-1">
+                                <input type="text" id="txt_oil_type_count" value="{{ oiltype.count }}"
+                                       style="display: none">
+                                <table style="position:absolute;left:0px;width:400px;height:120px;z-index:38;"
+                                       id="tbl_add_service_customer">
+                                    {% if oiltype %}
+                                        {% for x3  in oiltype %}
+                                            <tr>
+                                                <td class="cell0">
+                                                    <input type="button" class="btn_add_service"
+                                                           onclick="add_row_service1(this);"
+                                                           style="font-size: 35px;font-weight: bold"
+                                                           id="oil_type_{{ forloop.counter0 }}"
+                                                           value="{{ x3.productname }} $ {{ x3.unitprice }}">
+                                                </td>
+                                            </tr>
+                                        {% endfor %}
+                                    {% endif %}
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <input type="submit" id="Button54"
+                       onclick="document.getElementById('Button54').disabled=true;return false;" name=""
+                       value="Oil Changing"
+                       style="position:absolute;left:67px;top:8px;width:290px;height:36px;z-index:69;">
+            </form>
+        </div>
+        <div id="wb_form_accessories"
+             style="position:absolute;visibility:hidden;left:630px;top:200px;width:428px;height:530px;z-index:90;">
+            <form name="form_accessories" method="post" action=""
+                  enctype="multipart/form-data" id="form_accessories">
+                <div id="wb_Carousel5"
+                     style="position:absolute;left:4px;top:52px;width:415px;height:469px;z-index:78;overflow:hidden;">
+                    <div id="Carousel5" style="position:absolute;">
+                        <div class="frame">
+                            <div class="table-wrapper-scroll-y-1 my-custom-scrollbar-1">
+                                <input type="text" id="txt_acc_type_count" value="{{ acctype.count }}"
+                                       style="display: none">
+                                <table style="position:absolute;left:0px;width:400px;height:120px;z-index:38;"
+                                       id="tbl_add_service_customer">
+                                    {% if acctype %}
+                                        {% for x4  in acctype %}
+                                            <tr>
+                                                <td class="cell0">
+                                                    <input type="button" class="btn_add_service"
+                                                           onclick="add_row_service2(this);"
+                                                           style="font-size: 35px;font-weight: bold"
+                                                           id="acc_type_{{ forloop.counter0 }}"
+                                                           value="{{ x4.productname }} $ {{ x4.unitprice }}">
+                                                </td>
+                                            </tr>
+                                        {% endfor %}
+                                    {% endif %}
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <input type="submit" id="Button55"
+                       onclick="document.getElementById('Button55').disabled=true;return false;" name=""
+                       value="Accessories"
+                       style="position:absolute;left:67px;top:8px;width:290px;height:36px;z-index:79;">
+            </form>
+        </div>
+    </form>
+</div>
+</body>
+</html>
+<script type="text/javascript">
+    function add_row_service(ctl) {
+        var index = $(ctl).parents("tr").index();
+        var count = document.getElementById('txt_car_type_count').value;
+
+        for (i = 0; i <= count; i++) {
+            if (i === index) {
+                var name = document.getElementById("car_type_" + index).value;
+                var str = name.split(' $ ')
+                for (item in str) {
+                    var name = str[0];
+                    var cost = str[1];
+                }
+                var table = document.getElementById("table_payment");
+                var table_len = (table.rows.length) - 1;
+                var qty = 1;
+                var exist = 0;
+                for (j = 0; j < table_len; j++) {
+                    if (document.getElementById("pname_service_" + j).value === name) {
+                        qty += parseInt(document.getElementById("qty_service_" + j).value);
+                        document.getElementById("qty_service_" + j).value = qty;
+                        exist = 1;
+                        document.getElementById("data_post_ser").value = table_len;
+                    }
+                }
+                if (exist === 0) {
+                    var row = table.insertRow(table_len).outerHTML =
+                        "<tr>" +
+                        "<td class='cell3'><input name ='pname_service_" + table_len + "' id ='pname_service_" + table_len + "' readonly style='border-style: none; width:100%; text-align: center;' value='" + name + "'></input></td>" +
+                        "<td class='cell4'><input type='number' min='1' name ='qty_service_" + table_len + "' id ='qty_service_" + table_len + "' onkeydown='return false' style='border-style: none; width:100%; text-align: center;' value='" + qty + "' onkeydown='return false'></input></td>" +
+                        "<td class='cell5'><input name ='cost_service_" + table_len + "' id ='cost_service_" + table_len + "'readonly style='border-style: none; width:100%; text-align: center;' value='" + cost + "'></input></td>" +
+                        "<td class='cell6'>" +
+                        "<button type='button' onclick='delete_row_service(this);' class='btndelete'> &nbspX&nbsp </button>" +
+                        "</td>" +
+                        "</tr>";
+                    document.getElementById("data_post_ser").value = table_len + 1;
+                }
+            }
+        }
+    }
+
+    function delete_row_service(ctl) {
+        var index = $(ctl).parents("tr").index();
+
+        var table = document.getElementById("table_payment");
+        var table_len = (table.rows.length) - 1;
+
+        var pname = [];
+        var qty = [];
+        var cost = [];
+        var j = 0;
+
+        for (i = 0; i <= table_len - 1; i++) {
+
+            if (i == index) {
+
+                continue;
+            }
+
+            pname[j] = document.getElementById("pname_service_" + i).value;
+            qty[j] = document.getElementById("qty_service_" + i).value;
+            cost[j] = document.getElementById("cost_service_" + i).value;
+            j++;
+        }
+        $("#table_payment tr").remove();
+
+        if (pname.length !== 0) {
+
+            for (i = 0; i < pname.length; i++) {
+
+                var row = table.insertRow(i).outerHTML =
+                    "<tr>" +
+                    "<td class='cell3'><input name ='pname_service_" + i + "' id ='pname_service_" + i + "'readonly style='border-style: none; width:100%; text-align: center;' value='" + pname[i] + "'></input></td>" +
+                    "<td class='cell4'><input type='number' min='1' name ='qty_service_" + i + "' id ='qty_service_" + i + "' onkeydown='return false' style='border-style: none; width:100%; text-align: center;' value='" + qty[i] + "' onkeydown='return false'></input></td>" +
+                    "<td class='cell5'><input name ='cost_service_" + i + "' id ='cost_service_" + i + "'readonly style='border-style: none; width:100%; text-align: center;' value='" + cost[i] + "' ></input></td>" +
+                    "<td class='cell6'>" +
+                    "<button type='button' onclick='delete_row_service(this);' class='btndelete'> &nbspX&nbsp </button>" +
+                    "</td>" +
+                    "</tr>";
+
+            }
+
+        }
+        $("#table_payment > tbody").append('<tr><td class="cell3" ></td><td class="cell4" ></td><td class="cell5" ></td><td class="cell6" ></td></tr>');
+        document.getElementById("data_post_ser").value = table_len -1;
+
+    }
+
+    function add_row_service1(ctl) {
+        var index = $(ctl).parents("tr").index();
+        var count = document.getElementById('txt_oil_type_count').value;
+
+        for (i = 0; i <= count; i++) {
+            if (i === index) {
+                var name = document.getElementById("oil_type_" + index).value;
+                var str = name.split(' $ ')
+                for (item in str) {
+                    var name = str[0];
+                    var cost = str[1];
+                }
+                var table = document.getElementById("table_payment");
+                var table_len = (table.rows.length) - 1;
+                var qty = 1;
+                var exist = 0;
+                for (j = 0; j < table_len; j++) {
+                    if (document.getElementById("pname_service_" + j).value === name) {
+                        qty += parseInt(document.getElementById("qty_service_" + j).value);
+                        document.getElementById("qty_service_" + j).value = qty;
+                        exist = 1;
+                        document.getElementById("data_post_ser").value = table_len;
+                    }
+                }
+                if (exist === 0) {
+                    var row = table.insertRow(table_len).outerHTML =
+                        "<tr>" +
+                        "<td class='cell3'><input name ='pname_service_" + table_len + "' id ='pname_service_" + table_len + "' readonly style='border-style: none; width:100%; text-align: center;' value='" + name + "'></input></td>" +
+                        "<td class='cell4'><input type='number' min='1' name ='qty_service_" + table_len + "' id ='qty_service_" + table_len + "' onkeydown='return false' style='border-style: none; width:100%; text-align: center;' value='" + qty + "' onkeydown='return false'></input></td>" +
+                        "<td class='cell5'><input name ='cost_service_" + table_len + "' id ='cost_service_" + table_len + "'readonly style='border-style: none; width:100%; text-align: center;' value='" + cost + "'></input></td>" +
+                        "<td class='cell6'>" +
+                        "<button type='button' onclick='delete_row_service(this);' class='btndelete'> &nbspX&nbsp </button>" +
+                        "</td>" +
+                        "</tr>";
+                    document.getElementById("data_post_ser").value = table_len + 1;
+                }
+            }
+        }
+    }
+
+    function add_row_service2(ctl) {
+        var index = $(ctl).parents("tr").index();
+        var count = document.getElementById('txt_acc_type_count').value;
+
+        for (i = 0; i <= count; i++) {
+            if (i === index) {
+                var name = document.getElementById("acc_type_" + index).value;
+                var str = name.split(' $ ')
+                for (item in str) {
+                    var name = str[0];
+                    var cost = str[1];
+                }
+                var table = document.getElementById("table_payment");
+                var table_len = (table.rows.length) - 1;
+                var qty = 1;
+                var exist = 0;
+                for (j = 0; j < table_len; j++) {
+                    if (document.getElementById("pname_service_" + j).value === name) {
+                        qty += parseInt(document.getElementById("qty_service_" + j).value);
+                        document.getElementById("qty_service_" + j).value = qty;
+                        exist = 1;
+                        document.getElementById("data_post_ser").value = table_len;
+                    }
+                }
+                if (exist === 0) {
+                    var row = table.insertRow(table_len).outerHTML =
+                        "<tr>" +
+                        "<td class='cell3'><input name ='pname_service_" + table_len + "' id ='pname_service_" + table_len + "' readonly style='border-style: none; width:100%; text-align: center;' value='" + name + "'></input></td>" +
+                        "<td class='cell4'><input type='number' min='1' name ='qty_service_" + table_len + "' id ='qty_service_" + table_len + "' onkeydown='return false' style='border-style: none; width:100%; text-align: center;' value='" + qty + "' onkeydown='return false'></input></td>" +
+                        "<td class='cell5'><input name ='cost_service_" + table_len + "' id ='cost_service_" + table_len + "'readonly style='border-style: none; width:100%; text-align: center;' value='" + cost + "'></input></td>" +
+                        "<td class='cell6'>" +
+                        "<button type='button' onclick='delete_row_service(this);' class='btndelete'> &nbspX&nbsp </button>" +
+                        "</td>" +
+                        "</tr>";
+                    document.getElementById("data_post_ser").value = table_len + 1;
+                }
+            }
+        }
+    }
+
+    function add_row_service3(ctl) {
+        var index = $(ctl).parents("tr").index();
+        var count = document.getElementById('txt_drink_type_count').value;
+
+        for (i = 0; i <= count; i++) {
+            if (i === index) {
+                var name = document.getElementById("drink_type_" + index).value;
+                var str = name.split(' $ ')
+                for (item in str) {
+                    var name = str[0];
+                    var cost = str[1];
+                }
+                var table = document.getElementById("table_payment");
+                var table_len = (table.rows.length) - 1;
+                var qty = 1;
+                var exist = 0;
+                for (j = 0; j < table_len; j++) {
+                    if (document.getElementById("pname_service_" + j).value === name) {
+                        qty += parseInt(document.getElementById("qty_service_" + j).value);
+                        document.getElementById("qty_service_" + j).value = qty;
+                        exist = 1;
+                        document.getElementById("data_post_ser").value = table_len;
+                    }
+                }
+                if (exist === 0) {
+                    var row = table.insertRow(table_len).outerHTML =
+                        "<tr>" +
+                        "<td class='cell3'><input name ='pname_service_" + table_len + "' id ='pname_service_" + table_len + "' readonly style='border-style: none; width:100%; text-align: center;' value='" + name + "'></input></td>" +
+                        "<td class='cell4'><input type='number' min='1' name ='qty_service_" + table_len + "' id ='qty_service_" + table_len + "'' onkeydown='return false' style='border-style: none; width:100%; text-align: center;' value='" + qty + "' onkeydown='return false'></input></td>" +
+                        "<td class='cell5'><input name ='cost_service_" + table_len + "' id ='cost_service_" + table_len + "'readonly style='border-style: none; width:100%; text-align: center;' value='" + cost + "'></input></td>" +
+                        "<td class='cell6'>" +
+                        "<button type='button' onclick='delete_row_service(this);' class='btndelete'> &nbspX&nbsp </button>" +
+                        "</td>" +
+                        "</tr>";
+                    document.getElementById("data_post_ser").value = table_len + 1;
+                }
+            }
+        }
+    }
+
+    function btnback_formservice() {
+        if (confirm("Are you sure?")) {
+            document.getElementById("txtbox_phonenumber_payment").value = '';
+            $("#table_payment tr").remove();
+            $("#table_payment > tbody").append('<tr><td class="cell3" ></td><td class="cell4" ></td><td class="cell5" ></td><td class="cell6" ></td></tr>');
+
+            ShowObjectWithEffect('wb_form_accessories', 0, 'slideright', 100);
+            ShowObjectWithEffect('wb_form_cartype', 0, 'slideright', 100);
+            ShowObjectWithEffect('wb_form_foods_drinks', 0, 'slideright', 100);
+            ShowObjectWithEffect('wb_form_oil', 0, 'slideright', 100);
+            ShowObjectWithEffect('wb_Service', 0, 'slideleft', 500);
+            ShowObjectWithEffect('wb_current_customer', 1, 'slideright', 500);
+            ShowObjectWithEffect('wb_New_customer', 0, 'slideleft', 500);
+            ShowObjectWithEffect('butt_newcustomer', 1, 'slideright', 500);
+            ShowObjectWithEffect('butt_viewcustomer', 0, 'slideleft', 500);
+            ShowObjectWithEffect('butt_add_more_service', 1, 'fade', 100);
+            ShowObjectWithEffect('wb_form_service', 0, 'slideleft', 500, 'swing');
+            document.getElementById('stock_button').disabled = false;
+            document.getElementById('customer_button').disabled = false;
+            document.getElementById('report_button').disabled = false;
+            document.getElementById('service_button').disabled = false;
+            document.getElementById('logout_butt').disabled = false;
+            return false;
+        } else {
+
+        }
+    }
+
+    function check_summit_Service() {
+        var appby = $("#combobox_approvedbyexpense option:selected").text();
+        var total = document.getElementById("txtbox_totalexpense").value;
+
+        if (total.substring(9) === '0') {
+            alert('Please makes some Ajustment(s) before summit again!!!');
+            event.preventDefault()
+            return false;
+        } else {
+            if (appby === 'Approved By:') {
+                alert('Please Fill in Ur Permission!!!');
+                event.preventDefault()
+                return false;
+            } else
+                return true;
+        }
+
+    }
+
+    function refresh_table() {
+        var table = document.getElementById("table_payment");
+        var table_len = (table.rows.length) - 1;
+        document.getElementById('data_post_ser').value = table_len;
+    }
+</script>

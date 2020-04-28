@@ -1,0 +1,984 @@
+<!doctype html>
+{% load static %}
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Recipt</title>
+    <meta name="generator" content="WYSIWYG Web Builder 15 - http://www.wysiwygwebbuilder.com">
+    <style>
+        @page {
+            size: A5;
+        }
+
+        body {
+            font-family: Arial;
+            font-weight: normal;
+            font-size: 13px;
+            line-height: 1.1875;
+            margin: 0;
+            padding: 0;
+            overflow-x: auto;
+            overflow-y: auto;
+        }
+
+        a {
+            color: #0000FF;
+            text-decoration: underline;
+        }
+
+        a:visited {
+            color: #800080;
+        }
+
+        a:active {
+            color: #FF0000;
+        }
+
+        a:hover {
+            color: #0000FF;
+            text-decoration: underline;
+        }
+
+        input:focus, textarea:focus, select:focus {
+            outline: none;
+        }
+
+        #wb_Image1 {
+            vertical-align: top;
+        }
+
+        #Image1 {
+            border: 0px solid #000000;
+            padding: 0;
+            margin: 0;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        #wb_Text1 {
+            background-color: transparent;
+            background-image: none;
+            border: 0px solid #000000;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+        }
+
+        #wb_Text1 div {
+            text-align: center;
+        }
+
+        #wb_Text2 {
+            background-color: transparent;
+            background-image: none;
+            border: 0px solid #000000;
+            padding: 0;
+            margin: 0;
+            text-align: left;
+        }
+
+        #wb_Text2 div {
+            text-align: left;
+        }
+
+        #wb_date_time {
+            background-color: transparent;
+            background-image: none;
+            border: 0px solid #000000;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+        }
+
+        #wb_date_time div {
+            text-align: center;
+        }
+
+        #wb_Text4 {
+            background-color: transparent;
+            background-image: none;
+            border: 0px solid #000000;
+            padding: 0;
+            margin: 0;
+            text-align: right;
+        }
+
+        #wb_Text4 div {
+            text-align: right;
+        }
+
+        #wb_cashier {
+            background-color: transparent;
+            background-image: none;
+            border: 0px solid #000000;
+            padding: 0;
+            margin: 0;
+            text-align: left;
+        }
+
+        #wb_cashier div {
+            text-align: left;
+        }
+
+        #wb_invoice_num {
+            background-color: transparent;
+            background-image: none;
+            border: 0px solid #000000;
+            padding: 0;
+            margin: 0;
+            text-align: right;
+        }
+
+        #wb_invoice_num div {
+            text-align: right;
+        }
+
+        #Table1 {
+            border: 1px solid #000000;
+            background-color: transparent;
+            background-image: none;
+            border-collapse: collapse;
+            border-spacing: 0px;
+            margin: 0;
+        }
+
+        #Table1 td {
+            padding: 0;
+        }
+
+        #Table1 td div {
+            white-space: nowrap;
+        }
+
+        #Table1 p, #Table1 ul {
+            margin: 0;
+            padding: 0;
+        }
+
+        #Table1 .cell0 {
+            background-color: #A9A9A9;
+            background-image: none;
+            border: 0px #000000 none;
+            text-align: center;
+            vertical-align: middle;
+            width: 222px;
+            height: 28px;
+            color: #000000;
+            font-family: Arial;
+            font-size: 15px;
+            line-height: 16.5px;
+        }
+
+        #Table1 .cell1 {
+            background-color: #A9A9A9;
+            background-image: none;
+            border: 0px #000000 none;
+            text-align: center;
+            vertical-align: middle;
+            width: 32px;
+            height: 28px;
+            color: #000000;
+            font-family: Arial;
+            font-size: 15px;
+            line-height: 16.5px;
+        }
+
+        #Table1 .cell2 {
+            background-color: #A9A9A9;
+            background-image: none;
+            border: 0px #000000 none;
+            text-align: center;
+            vertical-align: middle;
+            width: 72px;
+            height: 28px;
+            color: #000000;
+            font-family: Arial;
+            font-size: 15px;
+            line-height: 16.5px;
+        }
+
+        #Table1 .cell3 {
+            background-color: #A9A9A9;
+            background-image: none;
+            border: 0px #000000 none;
+            text-align: center;
+            vertical-align: middle;
+            width: 62px;
+            height: 28px;
+            color: #000000;
+            font-family: Arial;
+            font-size: 15px;
+            line-height: 16.5px;
+        }
+
+        #Table1 .cell4 {
+            background-color: #A9A9A9;
+            background-image: none;
+            border: 0px #000000 none;
+            text-align: center;
+            vertical-align: middle;
+            width: 109px;
+            height: 28px;
+            color: #000000;
+            font-family: Arial;
+            font-size: 15px;
+            line-height: 16.5px;
+        }
+
+        #Table1 .cell5 {
+            background-color: transparent;
+            background-image: none;
+            border: 0px #000000 solid;
+            text-align: center;
+            vertical-align: middle;
+            width: 222px;
+            height: 28px;
+            color: #000000;
+            font-family: Arial;
+            font-size: 15px;
+            line-height: 16.5px;
+        }
+
+        #Table1 .cell6 {
+            background-color: transparent;
+            background-image: none;
+            border: 0px #000000 solid;
+            text-align: center;
+            vertical-align: middle;
+            width: 32px;
+            height: 28px;
+            color: #000000;
+            font-family: Arial;
+            font-size: 15px;
+            line-height: 16.5px;
+        }
+
+        #Table1 .cell7 {
+            background-color: transparent;
+            background-image: none;
+            border: 0px #000000 solid;
+            text-align: center;
+            vertical-align: middle;
+            width: 72px;
+            height: 28px;
+            color: #000000;
+            font-family: Arial;
+            font-size: 15px;
+            line-height: 16.5px;
+        }
+
+        #Table1 .cell8 {
+            background-color: transparent;
+            background-image: none;
+            border: 0px #000000 solid;
+            text-align: center;
+            vertical-align: middle;
+            width: 62px;
+            height: 28px;
+            color: #000000;
+            font-family: Arial;
+            font-size: 15px;
+            line-height: 16.5px;
+        }
+
+        #Table1 .cell9 {
+            background-color: transparent;
+            background-image: none;
+            border: 0px #000000 solid;
+            text-align: center;
+            vertical-align: middle;
+            width: 109px;
+            height: 28px;
+            color: #000000;
+            font-family: Arial;
+            font-size: 15px;
+            line-height: 16.5px;
+        }
+
+        #Table1 .cell10 {
+            background-color: transparent;
+            background-image: none;
+            border: 0px #000000 solid;
+            text-align: center;
+            vertical-align: middle;
+            width: 222px;
+            height: 28px;
+            color: #000000;
+            font-family: Arial;
+            font-size: 13px;
+            line-height: 16px;
+        }
+
+        #wb_Text7 {
+            background-color: transparent;
+            background-image: none;
+            border: 0px solid #000000;
+            padding: 0;
+            margin: 0;
+            text-align: right;
+        }
+
+        #wb_Text7 div {
+            text-align: right;
+        }
+
+        #wb_Text8 {
+            background-color: transparent;
+            background-image: none;
+            border: 0px solid #000000;
+            padding: 0;
+            margin: 0;
+            text-align: right;
+        }
+
+        #wb_Text8 div {
+            text-align: right;
+        }
+
+        #wb_Text9 {
+            background-color: transparent;
+            background-image: none;
+            border: 0px solid #000000;
+            padding: 0;
+            margin: 0;
+            text-align: right;
+        }
+
+        #wb_Text9 div {
+            text-align: right;
+        }
+
+        #wb_Text10 {
+            background-color: transparent;
+            background-image: none;
+            border: 0px solid #000000;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+        }
+
+        #wb_Text10 div {
+            text-align: center;
+        }
+
+        #wb_Text11 {
+            background-color: transparent;
+            background-image: none;
+            border: 0px solid #000000;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+        }
+
+        #wb_Text11 div {
+            text-align: center;
+        }
+
+        #wb_Text12 {
+            background-color: transparent;
+            background-image: none;
+            border: 0px solid #000000;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+        }
+
+        #wb_Text12 div {
+            text-align: center;
+        }
+
+        #wb_before_vat {
+            background-color: transparent;
+            background-image: none;
+            border: 0px solid #000000;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+        }
+
+        #wb_before_vat div {
+            text-align: center;
+        }
+
+        #wb_vat {
+            background-color: transparent;
+            background-image: none;
+            border: 0px solid #000000;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+        }
+
+        #wb_vat div {
+            text-align: center;
+        }
+
+        #wb_grand_total {
+            background-color: transparent;
+            background-image: none;
+            border: 0px solid #000000;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+        }
+
+        #wb_grand_total div {
+            text-align: center;
+        }
+
+        #Line1 {
+            border-color: #A0A0A0;
+            border-style: solid;
+            border-bottom-width: 2px;
+            border-top: 0px;
+            border-left: 0px;
+            border-right: 0px;
+            height: 0 !important;
+            line-height: 0px !important;
+            margin: 0;
+            padding: 0;
+        }
+
+        #wb_Text16 {
+            background-color: transparent;
+            background-image: none;
+            border: 0px solid #000000;
+            padding: 0;
+            margin: 0;
+            text-align: right;
+        }
+
+        #wb_Text16 div {
+            text-align: right;
+        }
+
+        #wb_Text17 {
+            background-color: transparent;
+            background-image: none;
+            border: 0px solid #000000;
+            padding: 0;
+            margin: 0;
+            text-align: right;
+        }
+
+        #wb_Text17 div {
+            text-align: right;
+        }
+
+        #wb_Text18 {
+            background-color: transparent;
+            background-image: none;
+            border: 0px solid #000000;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+        }
+
+        #wb_Text18 div {
+            text-align: center;
+        }
+
+        #wb_receive_dollar {
+            background-color: transparent;
+            background-image: none;
+            border: 0px solid #000000;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+        }
+
+        #wb_receive_dollar div {
+            text-align: center;
+        }
+
+        #wb_Text20 {
+            background-color: transparent;
+            background-image: none;
+            border: 0px solid #000000;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+        }
+
+        #wb_Text20 div {
+            text-align: center;
+        }
+
+        #wb_receive_riel {
+            background-color: transparent;
+            background-image: none;
+            border: 0px solid #000000;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+        }
+
+        #wb_receive_riel div {
+            text-align: center;
+        }
+
+        #wb_Text22 {
+            background-color: transparent;
+            background-image: none;
+            border: 0px solid #000000;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+        }
+
+        #wb_Text22 div {
+            text-align: center;
+        }
+
+        #wb_change_dollar {
+            background-color: transparent;
+            background-image: none;
+            border: 0px solid #000000;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+        }
+
+        #wb_change_dollar div {
+            text-align: center;
+        }
+
+        #wb_Text24 {
+            background-color: transparent;
+            background-image: none;
+            border: 0px solid #000000;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+        }
+
+        #wb_Text24 div {
+            text-align: center;
+        }
+
+        #wb_change_riel {
+            background-color: transparent;
+            background-image: none;
+            border: 0px solid #000000;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+        }
+
+        #wb_change_riel div {
+            text-align: center;
+        }
+
+        #wb_Text26 {
+            background-color: transparent;
+            background-image: none;
+            border: 0px solid #000000;
+            padding: 0;
+            margin: 0;
+            text-align: left;
+        }
+
+        #wb_Text26 div {
+            text-align: left;
+        }
+
+        #wb_Text27 {
+            background-color: transparent;
+            background-image: none;
+            border: 0px solid #000000;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+        }
+
+        #wb_Text27 div {
+            text-align: center;
+        }
+
+        #wb_Text28 {
+            background-color: transparent;
+            background-image: none;
+            border: 0px solid #000000;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+        }
+
+        #wb_Text28 div {
+            text-align: center;
+        }
+
+        #wb_Text29 {
+            background-color: transparent;
+            background-image: none;
+            border: 0px solid #000000;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+        }
+
+        #wb_Text29 div {
+            text-align: center;
+        }
+
+        #Line2 {
+            border-color: #A0A0A0;
+            border-style: solid;
+            border-bottom-width: 2px;
+            border-top: 0px;
+            border-left: 0px;
+            border-right: 0px;
+            height: 0 !important;
+            line-height: 0px !important;
+            margin: 0;
+            padding: 0;
+        }
+
+        #wb_Form1 {
+            background-color: #FBFBFB;
+            background-image: none;
+            border: 0px solid #CCCCCC;
+        }
+
+        #tablle1, #Tablle2 {
+            border-collapse: collapse;
+        }
+
+        #Tablle1 .coll0, #Tablle2 .coll0 {
+            border: 0px #000000 none;
+            width: 100px;
+            height: 20px;
+            color: #000000;
+            font-family: Arial;
+            font-size: 15px;
+            line-height: 16.5px;
+        }
+
+        #Tablle1 .coll1, #Tablle2 .coll1 {
+            border: 0px #000000 none;
+            width: 50px;
+            height: 20px;
+            color: #000000;
+            text-align: right;
+            font-family: Arial;
+            font-size: 15px;
+            line-height: 16.5px;
+        }
+
+        #Tablle1 .coll2, #Tablle2 .coll2 {
+            border: 0px #000000 none;
+            width: 100px;
+            height: 20px;
+            color: #000000;
+            font-family: Arial;
+            font-size: 15px;
+            line-height: 16.5px;
+        }
+
+        #Tablle1 .coll3, #Tablle2 .coll3 {
+            border: 0px #000000 none;
+            width: 100px;
+            height: 20px;
+            color: #000000;
+            font-family: Arial;
+            font-size: 15px;
+            line-height: 16.5px;
+        }
+
+        #Tablle1 .coll4, #Tablle2 .coll4 {
+            border: 0px #000000 none;
+            width: 50px;
+            height: 20px;
+            color: #000000;
+            text-align: right;
+            font-family: Arial;
+            font-size: 15px;
+            line-height: 16.5px;
+        }
+
+        #Tablle1 .coll5, #Tablle2 .coll5 {
+            border: 0px #000000 none;
+            width: 100px;
+            height: 20px;
+            color: #000000;
+            font-family: Arial;
+            font-size: 15px;
+            line-height: 16.5px;
+        }
+
+        #Tablle1 .coll6, #Tablle2 .coll6 {
+            border: 0px #000000 none;
+            width: 100px;
+            height: 20px;
+            color: #000000;
+            font-family: Arial;
+            font-size: 15px;
+            line-height: 16.5px;
+        }
+
+        #Tablle1 .coll7, #Tablle2 .coll7 {
+            border: 0px #000000 none;
+            width: 50px;
+            height: 20px;
+            color: #000000;
+            text-align: right;
+            font-family: Arial;
+            font-size: 15px;
+            line-height: 16.5px;
+        }
+
+        #Tablle1 .coll8, #Tablle2 .coll8 {
+            border: 0px #000000 none;
+            width: 100px;
+            height: 20px;
+            color: #000000;
+            font-family: Arial;
+            font-size: 15px;
+            line-height: 16.5px;
+        }
+
+        #Tablle1 .coll9, #Tablle2 .coll9 {
+            border: 0px #000000 none;
+            width: 100px;
+            height: 20px;
+            color: #000000;
+            font-family: Arial;
+            font-size: 15px;
+            line-height: 16.5px;
+        }
+
+        #Tablle1 .coll10, #Tablle2 .coll10 {
+            border: 0px #000000 none;
+            width: 50px;
+            height: 20px;
+            color: #000000;
+            text-align: right;
+            font-family: Arial;
+            font-size: 15px;
+            line-height: 16.5px;
+        }
+
+        #Tablle1 .coll11, #Tablle2 .coll11 {
+            border: 0px #000000 none;
+            width: 100px;
+            height: 20px;
+            color: #000000;
+            font-family: Arial;
+            font-size: 15px;
+            line-height: 16.5px;
+        }
+
+        #tablle3 {
+            text-align: center;
+            border-collapse: collapse;
+        }
+
+        #Tablle3 .coll0 {
+            border: 0px #000000 none;
+            width: 20px;
+            height: 28px;
+            color: #000000;
+            font-family: Arial;
+            font-size: 15px;
+            line-height: 16.5px;
+        }
+
+        #Tablle3 .coll1 {
+            border: 0px #000000 none;
+            width: 80px;
+            height: 28px;
+            color: #000000;
+            font-family: Arial;
+            font-size: 15px;
+            line-height: 16.5px;
+        }
+
+        #Tablle3 .coll2 {
+            border: 0px #000000 none;
+            width: 300px;
+            height: 28px;
+            color: #000000;
+            text-align: center;
+            font-family: Arial;
+            font-size: 15px;
+            line-height: 16.5px;
+        }
+
+        #Tablle3 .coll3 {
+            border: 0px #000000;
+            width: 20px;
+            height: 28px;
+            color: #000000;
+            font-family: Arial;
+            font-size: 15px;
+            line-height: 16.5px;
+        }
+
+        #Tablle3 .coll4 {
+            border: 0px #000000;
+            width: 80px;
+            height: 28px;
+            color: #000000;
+            font-family: Arial;
+            font-size: 15px;
+            line-height: 16.5px;
+        }
+    </style>
+</head>
+<body>
+<div id="wb_Form1" style="float: none;width:520px;z-index:33;">
+    <form name="Form1" method="post" action="" enctype="multipart/form-data" id="Form1">
+        <div id="wb_Image1" style="float: none;margin-left:180px;width:268px;height:267px;z-index:28;">
+            <img src="../static/images/logo.png" id="Image1" alt=""
+                 height="268px" width="267px"></div>
+        <div id="wb_Text1" style="float: none;margin-left:0px;width:268px;height:68px;text-align:center;z-index:19;">
+            <span style="color:#000000;font-family:Arial;font-size:15px;line-height:22px;">Tel: 010 575 790 | 010 790 575<br>Address: #4 St.233-259 Tuk Laak-1<br>Khan Toulkok, Phnom Penh, Cambodia</span>
+        </div>
+
+
+        <table style="margin-left:40px;width:520px;height:30px;border-collapse: collapse;z-index:24;">
+            <tr>
+                <td style="border: 0px #000000;width: 60px;height: 28px;color: #000000;font-family: Arial;line-height: 16.5px;">
+                    Cashier:
+                </td>
+                <td style="border: 0px #000000;width: 60px;height: 28px;color: #000000;font-family: Arial;line-height: 16.5px;">{{ user }}</td>
+                <td style="text-align: center;border: 0px #000000;width: 310px;height: 28px;color: #000000;font-family: Arial;line-height: 16.5px;">{{ date }}</td>
+                <td style="border: 0px #000000;width: 40px;height: 28px;color: #000000;font-family: Arial;line-height: 16.5px;">
+                    No:
+                </td>
+                <td style="border: 0px #000000;width: 70px;height: 28px;color: #000000;font-family: Arial;line-height: 16.5px;">{{ sellid }}</td>
+            </tr>
+        </table>
+
+        <table style="z-index:24;width: 520px;height: 28px;background-color: transparent;border-collapse: collapse;border-spacing: 0px;">
+            <tr>
+                <td style="text-align: center;vertical-align: middle;width: 220px;height: 28px;background-color: #CCCCCC;color: #000000;font-family: Arial;font-size: 15px;line-height: 16.5px;">
+                    Service
+                </td>
+                <td style="text-align: center;vertical-align: middle;width: 60px;height: 28px;background-color: #CCCCCC;color: #000000;font-family: Arial;font-size: 15px;line-height: 16.5px;">
+                    Qty
+                </td>
+                <td style="text-align: center;vertical-align: middle;width: 100px;height: 28px;background-color: #CCCCCC;color: #000000;font-family: Arial;font-size: 15px;line-height: 16.5px;">
+                    Price
+                </td>
+                <td style="text-align: center;vertical-align: middle;width: 80px;height: 28px;background-color: #CCCCCC;color: #000000;font-family: Arial;font-size: 15px;line-height: 16.5px;">
+                    Discount
+                </td>
+                <td style="text-align: center;vertical-align: middle;width: 110px;height: 28px;background-color: #CCCCCC;color: #000000;font-family: Arial;font-size: 15px;line-height: 16.5px;">
+                    Total
+                </td>
+            </tr>
+            {% if selldetail %}
+                {% for item in selldetail %}
+                    <tr>
+                        <td style="text-align: center;vertical-align: middle;width: 220px;height: 28px;color: #000000;font-family: Arial;font-size: 15px;line-height: 16.5px;">{{ item.productid }}</td>
+                        <td style="text-align: center;vertical-align: middle;width: 60px;height: 28px;color: #000000;font-family: Arial;font-size: 15px;line-height: 16.5px;">{{ item.qty }}</td>
+                        <td style="text-align: center;vertical-align: middle;width: 100px;height: 28px;color: #000000;font-family: Arial;font-size: 15px;line-height: 16.5px;">{{ item.price }}</td>
+                        <td style="text-align: center;vertical-align: middle;width: 80px;height: 28px;color: #000000;font-family: Arial;font-size: 15px;line-height: 16.5px;">{{ item.discount }}</td>
+                        <td style="text-align: center;vertical-align: middle;width: 110px;height: 28px;color: #000000;font-family: Arial;font-size: 15px;line-height: 16.5px;">{{ item.total }}</td>
+                    </tr>
+                {% endfor %}
+            {% endif %}
+            <tr>
+                <td class="cell10"><p style="font-size:11px;line-height:12px;color:#000000;"><span
+                        style="color:#000000;">&nbsp;</span><span style="color:#000000;"></span></p></td>
+                <td class="cell6"><p style="font-size:12px;line-height:13.5px;color:#000000;"><span
+                        style="color:#000000;"></span></p></td>
+                <td class="cell7"><p style="font-size:12px;line-height:13.5px;color:#000000;"><span
+                        style="color:#000000;"></span></p></td>
+                <td class="cell8"><p style="font-size:12px;line-height:13.5px;color:#000000;"><span
+                        style="color:#000000;"></span></p></td>
+                <td class="cell9"><p style="font-size:12px;line-height:13.5px;color:#000000;"><span
+                        style="color:#000000;"></span></p></td>
+            </tr>
+        </table>
+        <table style="width:520px;height:300px;">
+            <tr>
+                <td style="border: 0px #000000 none;width: 150px;height: 20px;color: #000000;font-family: Arial;font-size: 15px;line-height: 16.5px;"></td>
+                <td style="border: 0px #000000 none;width: 140px;height: 20px;color: #000000;font-family: Arial;font-size: 15px;line-height: 16.5px;"></td>
+                <td style="border: 0px #000000 none;width: 100px;height: 20px;color: #000000;font-family: Arial;font-size: 15px;line-height: 16.5px;">
+                    Before VAT:
+                </td>
+                <td style="border: 0px #000000 none;width: 50px;height: 20px;color: #000000;font-family: Arial;font-size: 15px;line-height: 16.5px;">
+                    $
+                </td>
+                <td style="border: 0px #000000 none;width: 83px;height: 20px;color: #000000;font-family: Arial;font-size: 15px;line-height: 16.5px;text-align: right;">{{ total }}</td>
+            </tr>
+            <tr>
+                <td style="border: 0px #000000 none;width: 150px;height: 20px;color: #000000;font-family: Arial;font-size: 15px;line-height: 16.5px;"></td>
+                <td style="border: 0px #000000 none;width: 150px;height: 20px;color: #000000;font-family: Arial;font-size: 15px;line-height: 16.5px;"></td>
+                <td style="border: 0px #000000 none;width: 100px;height: 20px;color: #000000;font-family: Arial;font-size: 15px;line-height: 16.5px;">
+                    VAT (10%):
+                </td>
+                <td style="border: 0px #000000 none;width: 50px;height: 20px;color: #000000;font-family: Arial;font-size: 15px;line-height: 16.5px;">
+                    $
+                </td>
+                <td style="border: 0px #000000 none;width: 83px;height: 20px;color: #000000;font-family: Arial;font-size: 15px;line-height: 16.5px;text-align: right;">{{ after_vat_total }}</td>
+            </tr>
+            <tr>
+                <td style="border: 0px #000000 none;width: 150px;height: 20px;color: #000000;font-family: Arial;font-size: 15px;line-height: 16.5px;"></td>
+                <td style="border: 0px #000000 none;width: 140px;height: 20px;color: #000000;font-family: Arial;font-size: 15px;line-height: 16.5px;"></td>
+                <td style="border: 0px #000000 none;width: 100px;height: 20px;color: #000000;font-family: Arial;font-size: 15px;line-height: 16.5px;">Grand Total:</td>
+                <td style="border: 0px #000000 none;width: 50px;height: 20px;color: #000000;font-family: Arial;font-size: 15px;line-height: 16.5px;">$</td>
+                <td style="border: 0px #000000 none;width: 83px;height: 20px;color: #000000;font-family: Arial;font-size: 15px;line-height: 16.5px;text-align: right;">{{ all_total }}</td>
+            </tr>
+        </table>
+
+        <hr id="Line1" style="margin-left:10px;margin-top:20px;margin-bottom: 20px;width:495px;z-index:25;">
+
+        <table style="width:520px;height:300px;">
+            <tr>
+                <td style="border: 0px #000000 none;width: 150px;height: 20px;color: #000000;font-family: Arial;font-size: 15px;line-height: 16.5px;"></td>
+                <td style="border: 0px #000000 none;width: 140px;height: 20px;color: #000000;font-family: Arial;font-size: 15px;line-height: 16.5px;"></td>
+                <td style="border: 0px #000000 none;width: 100px;height: 20px;color: #000000;font-family: Arial;font-size: 15px;line-height: 16.5px;">Receive:</td>
+                <td style="border: 0px #000000 none;width: 50px;height: 20px;color: #000000;font-family: Arial;font-size: 15px;line-height: 16.5px;">$</td>
+                <td style="border: 0px #000000 none;width: 83px;height: 20px;color: #000000;font-family: Arial;font-size: 15px;line-height: 16.5px;text-align: right;">{{ recieve_d }}</td>
+            </tr>
+            <tr>
+                <td style="border: 0px #000000 none;width: 150px;height: 20px;color: #000000;font-family: Arial;font-size: 15px;line-height: 16.5px;"></td>
+                <td style="border: 0px #000000 none;width: 140px;height: 20px;color: #000000;font-family: Arial;font-size: 15px;line-height: 16.5px;"></td>
+                <td style="border: 0px #000000 none;width: 100px;height: 20px;color: #000000;font-family: Arial;font-size: 15px;line-height: 16.5px;"></td>
+                <td style="border: 0px #000000 none;width: 50px;height: 20px;color: #000000;font-family: Arial;font-size: 15px;line-height: 16.5px;">Riel</td>
+                <td style="border: 0px #000000 none;width: 83px;height: 20px;color: #000000;font-family: Arial;font-size: 15px;line-height: 16.5px;text-align: right;">{{ recieve_r }}</td>
+            </tr>
+            <tr>
+                <td style="border: 0px #000000 none;width: 150px;height: 20px;color: #000000;font-family: Arial;font-size: 15px;line-height: 16.5px;"></td>
+                <td style="border: 0px #000000 none;width: 140px;height: 20px;color: #000000;font-family: Arial;font-size: 15px;line-height: 16.5px;"></td>
+                <td style="border: 0px #000000 none;width: 100px;height: 20px;color: #000000;font-family: Arial;font-size: 15px;line-height: 16.5px;">Change:</td>
+                <td style="border: 0px #000000 none;width: 50px;height: 20px;color: #000000;font-family: Arial;font-size: 15px;line-height: 16.5px;">$</td>
+                <td style="border: 0px #000000 none;width: 83px;height: 20px;color: #000000;font-family: Arial;font-size: 15px;line-height: 16.5px;text-align: right;">{{ change_d }}</td>
+            </tr>
+            <tr>
+                <td style="border: 0px #000000 none;width: 150px;height: 20px;color: #000000;font-family: Arial;font-size: 15px;line-height: 16.5px;"></td>
+                <td style="border: 0px #000000 none;width: 140px;height: 20px;color: #000000;font-family: Arial;font-size: 15px;line-height: 16.5px;"></td>
+                <td style="border: 0px #000000 none;width: 100px;height: 20px;color: #000000;font-family: Arial;font-size: 15px;line-height: 16.5px;"></td>
+                <td style="border: 0px #000000 none;width: 50px;height: 20px;color: #000000;font-family: Arial;font-size: 15px;line-height: 16.5px;">Riel</td>
+                <td style="border: 0px #000000 none;width: 83px;height: 20px;color: #000000;font-family: Arial;font-size: 15px;line-height: 16.5px;text-align: right;">{{ change_r }}</td>
+            </tr>
+        </table>
+
+        <hr id="Line2" style="float: none;margin-left:10px;margin-top:10px;width:495px;z-index:32;">
+
+        <div id="wb_Text26" style="float: none;margin-left:10px;margin-top:10px;width:200px;height:12px;z-index:22;">
+            <span style="color:#000000;font-family:Arial;font-size:13px;">Exchange Rate: $1 = 4,000 Riel</span></div>
+
+        <div id="wb_Text27"
+             style="float: none;margin-left:10px;margin-top:10px;idth:495px;height:14px;text-align:center;z-index:26;">
+            <span style="color:#000000;font-family:Arial;font-size:15px;">Payment Method: Cash</span></div>
+
+        <div id="wb_Text28"
+             style="float: none;margin-left:10px;margin-top:10px;width:495px;height:14px;text-align:center;z-index:27;">
+            <span style="color:#000000;font-family:Arial;font-size:15px;">WiFi Password: panpancarwash123</span></div>
+
+        <div id="wb_Text29"
+             style="float: none;margin-left:7px;margin-top:10px;margin-bottom:10px;width:495px;height:19px;text-align:center;z-index:29;">
+            <span style="color:#000000;font-family:Arial;font-size:21px;"><strong>Thank You, See You Again !</strong></span>
+        </div>
+
+
+    </form>
+</div>
+</body>
+</html>

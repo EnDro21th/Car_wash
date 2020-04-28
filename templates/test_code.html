@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>test</title>
+</head>
+<body>
+<img src="../static/images/services_60px.png"/>
+<select id="picDD">
+    <option value="1" selected>Picute 1</option>
+    <option value="2">Picute 2</option>
+    <option value="3">Picute 3</option>
+    <option value="4">Picute 4</option>
+    <option value="5">Picute 5</option>
+</select>
+</body>
+</html>
+
+<script type="text/javascript">
+    var pictureList = [
+        "/images/services_60px.png",
+        "http://lorempixel.com/400/200/sports/2",
+        "http://lorempixel.com/400/200/sports/3",
+        "http://lorempixel.com/400/200/sports/4",
+        "http://lorempixel.com/400/200/sports/5",];
+
+    $('#picDD').change(function () {
+        var val = parseInt($('#picDD').val());
+        $('img').attr("src", pictureList[val]);
+    });
+</script>
