@@ -85,11 +85,11 @@ WSGI_APPLICATION = 'SA.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'HOST': 'localhost',
+        'HOST': 'endrox21.mysql.pythonanywhere-services.com',
         'PORT': '3306',
         'NAME': 'db',
-        'USER': 'root',
-        'PASSWORD': '',
+        'USER': 'endrox21',
+        'PASSWORD': '123@Kill',
     }
 }
 
